@@ -52,9 +52,11 @@ app
     const user = users.find((user) => user.id === id);
     return res.json(user);
 })
-.post((req,res)=>{ })     // Next lecture
-.patch((req,res) =>{ })   // Next lecture
-.delete((req,res) =>{ })   // Next lecture
+.post((req,res)=>{
+    return res.json({Status:"pending"});
+})                 
+.patch((req,res) =>{ })   
+.delete((req,res) =>{ })   
 
 
 app.listen(PORT,()=>console.log(`Server Started at PORT : ${PORT}`));

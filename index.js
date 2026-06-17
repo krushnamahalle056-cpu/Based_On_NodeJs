@@ -1,5 +1,5 @@
 const express = require("express");
-
+const fs = require("fs");
 const users = require("./MOCK_DATA.json");
 
 const app = express();
@@ -67,9 +67,10 @@ app.get('/api/users',(req,res)=>{
 
     app.post("/api/users",(req,res)=>{
         const body = req.body;
-        console.log("body",body);
-        return res.json({status:"success"})
-    })
-
+        users.push(body);
+        fs.writeFile("./MOCK_DATA.json", JSON.stringify(users),(err,data)=>{
+            return res.json({status:"success"});
+        });
+    });
 
 app.listen(PORT,()=>console.log(`Server Started at PORT : ${PORT}`));

@@ -1,8 +1,12 @@
 const express = require("express");
+
 const users = require("./MOCK_DATA.json");
 
 const app = express();
 const PORT = 8000;
+
+// Midelware - Plugin
+app.use(express.urlencoded({extended:false}));
 
 // Routes
 
@@ -60,8 +64,6 @@ app.get('/api/users',(req,res)=>{
 // .delete((req,res) =>{ })   
 
 
-    // Midelware - Plugin
-    app.use(express.urlencoded({extended:false}));
 
     app.post("/api/users",(req,res)=>{
         const body = req.body;

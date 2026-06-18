@@ -65,13 +65,29 @@ app.get('/api/users/:id', (req,res) =>{
 
 
 
-    app.post("/api/users",(req,res)=>{
-        const body = req.body;
-        users.push({...body, id: users.length+1});
-        fs.writeFile("./MOCK_DATA.json", JSON.stringify(users),(err,data)=>{
-            return res.json({status:"success" , id: users.length});
-        });
+    // app.post("/api/users",(req,res)=>{
+    //     const body = req.body;
+    //     users.push({...body, id: users.length+1});
+    //     fs.writeFile("./MOCK_DATA.json", JSON.stringify(users),(err,data)=>{
+    //         return res.json({status:"success" , id: users.length});
+    //     });
+    // });
+
+   app.post("/api/users/:id",( req,res)=>{
+        const id = Number(req.params.id);
+            const user = users.find((user) => user.id === id);
+            if (!user) {
+                return res.status(404).json({ error: "User not found" });
+            }
+            const body = req.body;
+            Object.assign(user, body);
+            fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err, data) => {
+                return res.json({ status: "success", user });
+            });
     });
+
+
+
 
     app.patch("/api/users/:id",(req,res)=>{
         const id = Number(req.params.id);
@@ -98,6 +114,6 @@ app.get('/api/users/:id', (req,res) =>{
         });
     });
 
-    
+
 
 app.listen(PORT,()=>console.log(`Server Started at PORT : ${PORT}`));

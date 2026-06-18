@@ -86,4 +86,18 @@ app.get('/api/users/:id', (req,res) =>{
         });
     });
 
+    app.delete("/api/users/:id",(req,res)=>{
+        const id = Number(req.params.id);
+        const index = users.findIndex((user) => user.id === id);
+        if (index === -1) {
+            return res.status(404).json({ error: "User not found" });
+        }
+        users.splice(index, 1);
+        fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err, data) => {
+            return res.json({ status: "success" });
+        });
+    });
+
+    
+
 app.listen(PORT,()=>console.log(`Server Started at PORT : ${PORT}`));

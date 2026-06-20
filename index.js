@@ -39,21 +39,6 @@ app.get('/api/users/:id', (req,res) =>{
     return res.json(user);
 });
 
-// app.post('/api/users' , (req,res) =>{
-//     // TODO Create new user 
-//     return res.json({Status:"pending"});
-// });
-
-// app.patch('/api/users/:id', (req,res) =>{
-//     // TODO : Edit the user with id
-//     return res.json({Status:"pending"});
-// });
-
-// app.delete('/api/users/:id' , (req,res) =>{
-//     // TODO Create new user 
-//     return res.json({Status:"pending"});
-// });
-
 
 // app
 // .route('/api/users/:id')

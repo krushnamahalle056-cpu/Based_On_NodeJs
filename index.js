@@ -10,7 +10,7 @@ app.use(express.urlencoded({extended:false}));
 
 app.use((req,res,next) =>{
     console.log("this is middlewere");
-    return res.json({msg:"this is middlewere 1"});
+    return next();
 })
 
 // Routes

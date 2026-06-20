@@ -8,6 +8,7 @@ const PORT = 8000;
 // Midelware - Plugin
 app.use(express.urlencoded({extended:false}));
 
+// I create a middleware 
 app.use((req,res,next) =>{
     console.log("this is middlewere");
     return next();

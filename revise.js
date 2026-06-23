@@ -21,5 +21,11 @@ switch(name){
             console.log("Hello, " + name + "!");
         }
     }
-    
+    break;
+    case "Kashish":
+        console.log(name + " " + "is a Girlfriend of Krushna");
+    break;
+    default:
+        console.log("Enter currect name ");
+        
 }

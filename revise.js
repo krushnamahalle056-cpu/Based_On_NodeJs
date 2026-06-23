@@ -9,8 +9,17 @@ switch(name){
     case "Krushna":{
         if(name == "krushna"){
             console.log("Hello, " + name + "!");
+        }else{
+            console.log("Hello, " + name + "!");
         }
     };
     break;
+    case "Rohan":{
+        if(name == "rohan"){
+            console.log("Hello, " + name + "!");
+        }else{
+            console.log("Hello, " + name + "!");
+        }
+    }
     
 }

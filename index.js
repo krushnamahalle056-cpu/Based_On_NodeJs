@@ -22,13 +22,17 @@ app.get('/users',(req,res) => {
         ${users.map((user) => `<li>${user.first_name}</li>`).join(" ")}
     </ul>
     `
+
+    res.setHeader("X-My-Name ","Krushna mahalle");
+ //   console.log(req.headers);      // this use for desplay headers
     res.send(html);
 })
 
 // REST API
 
 app.get('/api/users',(req,res)=>{
-    res.setHeader("X-MyName ","Krushna mahalle");
+    console.log(req.headers);
+    // res.setHeader("X-MyName ","Krushna mahalle");
     // Always add X to custum headers otherwise lagega ki hum use build in header bhejne ki koshish kr rahe the
 
     return res.json(users);

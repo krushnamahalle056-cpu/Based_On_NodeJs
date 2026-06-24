@@ -2,19 +2,17 @@ console.log("Now I start the revision of JavaScript");
 
 // After a long time I start the pending work about web development
 
-let name = prompt("Enter your name");
-
-switch (name) {
+switch ('Kashish') {
     case "Krushna":
-        console.log("Hello, " + name + "!");
+        console.log("Hello Krushna");
         break;
 
     case "Rohan":
-        console.log("Hello, " + name + "!");
+        console.log("Hello Rohan");
         break;
 
     case "Kashish":
-        console.log(name + " is a BestFriendForever of Krushna");
+        console.log(" Kashish is a BestFriendForever of Krushna");
         break;
 
     default:

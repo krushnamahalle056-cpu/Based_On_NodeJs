@@ -14,7 +14,7 @@ switch (name) {
         break;
 
     case "Kashish":
-        console.log(name + " is a Girlfriend of Krushna");
+        console.log(name + " is a BestFriendForever of Krushna");
         break;
 
     default:

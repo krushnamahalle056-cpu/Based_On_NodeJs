@@ -1,31 +1,22 @@
-console.log("now I start the revision of javascript");
+console.log("Now I start the revision of JavaScript");
 
-// After long time I start the pending work about the web development 
+// After a long time I start the pending work about web development
 
-var name = prompt("Enter your name ");
+let name = prompt("Enter your name");
 
+switch (name) {
+    case "Krushna":
+        console.log("Hello, " + name + "!");
+        break;
 
-switch(name){
-    case "Krushna":{
-        if(name == "krushna"){
-            console.log("Hello, " + name + "!");
-        }else{
-            console.log("Hello, " + name + "!");
-        }
-    };
-    break;
-    case "Rohan":{
-        if(name == "rohan"){
-            console.log("Hello, " + name + "!");
-        }else{
-            console.log("Hello, " + name + "!");
-        }
-    }
-    break;
+    case "Rohan":
+        console.log("Hello, " + name + "!");
+        break;
+
     case "Kashish":
-        console.log(name + " " + "is a Girlfriend of Krushna");
-    break;
+        console.log(name + " is a Girlfriend of Krushna");
+        break;
+
     default:
-        console.log("Enter currect name ");
-        
+        console.log("Enter correct name");
 }

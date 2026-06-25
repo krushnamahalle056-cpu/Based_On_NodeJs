@@ -44,4 +44,7 @@ console.log(boys.concat(girls));
 
 console.log(boys.join("girls"));
 console.log(boys.reverse());
+console.log(boys.slice());
+console.log(girls.splice(0,1,"kashish"));
+
 

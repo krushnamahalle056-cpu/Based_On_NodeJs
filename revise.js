@@ -27,4 +27,11 @@ console.log(table);
 console.log(table.length);
 console.log(table[0]);
 console.log(table.push(22));
-console.log(table.unshift(0));
+console.log(table.shift());
+
+console.log(table);
+
+console.log(table.pop(22));
+console.log(table.unshift(2))
+
+console.log(table);

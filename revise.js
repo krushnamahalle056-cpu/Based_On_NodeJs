@@ -14,3 +14,4 @@ for(let i = 1; i<=10; i++){
 // String methods revision 
 
 console.log(myName.trim());
+console.log(myName.toLowerCase());

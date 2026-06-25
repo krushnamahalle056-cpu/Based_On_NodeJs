@@ -1,4 +1,4 @@
-let myName = "kunal";
+let myName = "krushna";
 console.log(myName.length);
 
 for(let i = 1; i<=10; i++){
@@ -6,7 +6,11 @@ for(let i = 1; i<=10; i++){
         console.log("my dream is become a famous person in india");
         console.log("My name is :"+myName);
     }else{
-        Alert("my name is not krushna");
+        console.log("my name is not krushna");
     }
 
 }
+
+// String methods revision 
+
+console.log(myName.trim());

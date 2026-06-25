@@ -45,14 +45,14 @@ console.log(boys.concat(girls));
 console.log(boys.join("girls"));
 console.log(boys.reverse());
 console.log(boys.slice());
-console.log(girls.splice(0,1,"kashish"));
+console.log(girls.splice(0,1));
 console.log(girls);
 
 let students = ["krushna","sarthak","Hariom", "pavan","Aishwarya","kashish","shreya","vishal"];
 console.log(students.sort());
 
 let classmates = [["Hariom","pavan","krushna","Kashish"],["sarthak","Aishwarya","Shreya"]];
-
+console.log(classmates);
 
 
 

@@ -1,4 +1,4 @@
-let myName = "Krushna";
+let myName = "   Krushna    ";
 console.log(myName.length);
 
 for(let i = 1; i<=10; i++){
@@ -15,3 +15,4 @@ for(let i = 1; i<=10; i++){
 
 console.log(myName.trim());
 console.log(myName.toLowerCase());
+console.log(myName.toUpperCase().trim());

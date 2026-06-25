@@ -16,3 +16,4 @@ for(let i = 1; i<=10; i++){
 console.log(myName.trim());
 console.log(myName.toLowerCase());
 console.log(myName.toUpperCase().trim());
+console.log(myName.toUpperCase().trim().slice(0,3));

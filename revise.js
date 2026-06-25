@@ -41,3 +41,7 @@ console.log(table.includes(8));
 let boys = ["krushna","sarthak"];
 let girls = ["Aishwarya","Kashish"];
 console.log(boys.concat(girls));
+
+console.log(boys.join("girls"));
+console.log(boys.reverse());
+

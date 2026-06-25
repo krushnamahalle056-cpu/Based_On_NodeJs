@@ -17,5 +17,5 @@ console.log(myName.trim());
 console.log(myName.toLowerCase());
 console.log(myName.toUpperCase().trim());
 console.log(myName.toUpperCase().trim().slice(0,3));
-console.log(myName.toUpperCase().trim().replace("ushna","ish"));
+console.log(myName.toUpperCase().trim().slice(0,2).concat("ish"));
 

@@ -54,5 +54,8 @@ console.log(students.sort());
 let classmates = [["Hariom","pavan","krushna","Kashish"],["sarthak","Aishwarya","Shreya"]];
 console.log(classmates);
 
-
-
+let n = 20;
+console.log(`table of ${n}:\n`);
+for(let i=n; i<= n*10; i=i+n){
+    console.log(`"table of ${n}:\n"`,i);
+}

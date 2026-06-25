@@ -35,3 +35,6 @@ console.log(table.pop(22));
 console.log(table.unshift(2))
 
 console.log(table);
+
+console.log(table.includes(8));
+

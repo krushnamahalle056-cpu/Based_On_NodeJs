@@ -1,4 +1,4 @@
-let myName = "krushna";
+let myName = "Krushna";
 console.log(myName.length);
 
 for(let i = 1; i<=10; i++){

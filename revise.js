@@ -1,8 +1,8 @@
-let name = prompt("Enter your name");
-console.log(name);
+// let name = prompt("Enter your name");
+// console.log(name);
 
-let myName = "   Krushna    ";
-console.log(myName.length);
+// let myName = "   Krushna    ";
+// console.log(myName.length);
 
 for(let i = 1; i<=10; i++){
     if(myName === "krushna"){

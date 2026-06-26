@@ -21,54 +21,71 @@ app.get('/users',(req,res) => {
     <ul>
         ${users.map((user) => `<li>${user.first_name}</li>`).join(" ")}
     </ul>
-    `
-
-    res.setHeader("X-My-Name ","Krushna mahalle");
- //   console.log(req.headers);      // this use for desplay headers
+    `;
     res.send(html);
-})
+});
 
 // REST API
 
 app.get('/api/users',(req,res)=>{
-    console.log(req.headers);
-    // res.setHeader("X-MyName ","Krushna mahalle");
-    // Always add X to custum headers otherwise lagega ki hum use build in header bhejne ki koshish kr rahe the
+    
+    res.setHeader("X-MyName ","Krushna mahalle");  // Custom Header
+    // Always add X to custum headers
 
     return res.json(users);
 });
 
 
-// // niche ka pura code different way main likha hai
-app.get('/api/users/:id', (req,res) =>{
-    const id = Number( req.params.id);
-    const user = users.find((user) => user.id === id);
-    return res.json(user);
-});
-
-
-// app
-// .route('/api/users/:id')
-// .get((req,res) => {
+// // // niche ka pura code different way main likha hai
+// app.get('/api/users/:id', (req,res) =>{
 //     const id = Number( req.params.id);
 //     const user = users.find((user) => user.id === id);
 //     return res.json(user);
-// })
-// .post((req,res)=>{
-//     return res.json({Status:"pending"});
-// })                 
-// .patch((req,res) =>{ })   
-// .delete((req,res) =>{ })   
+// });
 
 
-
-app.post("/api/users",(req,res)=>{
+app
+.route('/api/users/:id')
+.get((req,res) => {
+    const id = Number( req.params.id);
+    const user = users.find((user) => user.id === id);
+    return res.json(user);
+})
+.post((req,res)=>{
     const body = req.body;
     users.push({...body, id: users.length+1});
     fs.writeFile("./MOCK_DATA.json", JSON.stringify(users),(err,data)=>{
         return res.json({status:"success" , id: users.length});
     });
+})
+.patch((req,res)=>{
+    const id = Number(req.params.id);
+    const user = users.find((user) => user.id === id);
+    if (!user) {
+        return res.status(404).json({ error: "User not found" });
+    }
+    const body = req.body;
+    Object.assign(user, body);
+    fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err, data) => {
+        return res.json({ status: "success", user });
+    });
+})
+.delete((req,res)=>{
+    const id = Number(req.params.id);
+    const index = users.findIndex((user) => user.id === id);
+    if (index === -1) {
+        return res.status(404).json({ error: "User not found" });
+    }
+    users.splice(index, 1);
+    fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err, data) => {
+        return res.json({ status: "success" });
+    });
 });
+ 
+
+
+
+
 
 // app.post("/api/users/:id",( req,res)=>{
 //     const id = Number(req.params.id);
@@ -86,30 +103,8 @@ app.post("/api/users",(req,res)=>{
 
 
 
-app.patch("/api/users/:id",(req,res)=>{
-    const id = Number(req.params.id);
-    const user = users.find((user) => user.id === id);
-    if (!user) {
-        return res.status(404).json({ error: "User not found" });
-    }
-    const body = req.body;
-    Object.assign(user, body);
-    fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err, data) => {
-        return res.json({ status: "success", user });
-    });
-});
 
-app.delete("/api/users/:id",(req,res)=>{
-    const id = Number(req.params.id);
-    const index = users.findIndex((user) => user.id === id);
-    if (index === -1) {
-        return res.status(404).json({ error: "User not found" });
-    }
-    users.splice(index, 1);
-    fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err, data) => {
-        return res.json({ status: "success" });
-    });
-});
+
 
 
 

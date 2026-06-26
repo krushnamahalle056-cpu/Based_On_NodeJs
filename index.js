@@ -61,9 +61,11 @@ app
         return res.status(404).json({ error: "User not found" });
     }
     const body = req.body;
+    console.log(user);
+    console.log(req.body);
     Object.assign(user, body);
     fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err, data) => {
-        return res.json({ status: "success", user });
+        return res.json(user);
     });
 })
 .delete((req,res)=>{
@@ -88,14 +90,11 @@ app.post('/api/users', (req, res) => {
         id: users.length + 1,
     });
 
-    fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err) => {
+    fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err,data) => {
         if (err) {
             return res.status(500).json({ status: "Error writing file" });
         }
-        return res.json({
-            status: "success",
-            id: users.length,
-        });
+        return res.status(201).json({ status:"success",id: users.length});
     });
 });
  
@@ -116,3 +115,6 @@ app.post('/api/users', (req, res) => {
 // });
 
 app.listen(PORT,()=>console.log(`Server Started at PORT : ${PORT}`));
+
+// kuch changes krne ke bad hame server ko restart karna padta hai us problem ko solve krne ke liye use nodemone (install nodemon)
+// nodemon kya krta hai jab bhi hum file main changes krte hai our save krte hai to atuomaticaly run hota hai  lekin pahle npm start krna padta hai

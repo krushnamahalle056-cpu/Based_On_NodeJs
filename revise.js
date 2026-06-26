@@ -64,8 +64,11 @@ for(let i=n; i<= n*10; i=i+n){
 }
 
 // Now start the revision of function 
-let a=34 , b=23;
+let a=34 , b=2;
 
-function add(){
-    console.log("addition of two numbers: ",a+b);
-}
+function adition() {
+    let c=a+b;
+    console.log("addition of two numbers: "+c);
+} ;
+
+adition();

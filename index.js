@@ -29,7 +29,7 @@ app.get('/users',(req,res) => {
 
 app.get('/api/users',(req,res)=>{
     
-    res.setHeader("X-MyName ","Krushna mahalle");  // Custom Header
+    res.setHeader("X-MyName","Krushna mahalle");  // Custom Header
     // Always add X to custum headers
 
     return res.json(users);
@@ -49,14 +49,10 @@ app
 .get((req,res) => {
     const id = Number( req.params.id);
     const user = users.find((user) => user.id === id);
+    if(!user){
+        return res.status(404).json({error: "User not found"});
+    }
     return res.json(user);
-})
-.post((req,res)=>{
-    const body = req.body;
-    users.push({...body, id: users.length+1});
-    fs.writeFile("./MOCK_DATA.json", JSON.stringify(users),(err,data)=>{
-        return res.json({status:"success" , id: users.length});
-    });
 })
 .patch((req,res)=>{
     const id = Number(req.params.id);
@@ -81,9 +77,28 @@ app
         return res.json({ status: "success" });
     });
 });
+
+
+
+app.post('/api/users', (req, res) => {
+    const body = req.body;
+
+    users.push({
+        ...body,
+        id: users.length + 1,
+    });
+
+    fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err) => {
+        if (err) {
+            return res.status(500).json({ status: "Error writing file" });
+        }
+        return res.json({
+            status: "success",
+            id: users.length,
+        });
+    });
+});
  
-
-
 
 
 
@@ -99,13 +114,5 @@ app
 //             return res.json({ status: "success", user });
 //         });
 // });
-
-
-
-
-
-
-
-
 
 app.listen(PORT,()=>console.log(`Server Started at PORT : ${PORT}`));

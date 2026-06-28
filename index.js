@@ -103,20 +103,6 @@ app.post('/api/users', (req, res) => {
  
 
 
-
-// app.post("/api/users/:id",( req,res)=>{
-//     const id = Number(req.params.id);
-//         const user = users.find((user) => user.id === id);
-//         if (!user) {
-//             return res.status(404).json({ error: "User not found" });
-//         }
-//         const body = req.body;
-//         Object.assign(user, body);
-//         fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err, data) => {
-//             return res.json({ status: "success", user });
-//         });
-// });
-
 app.listen(PORT,()=>console.log(`Server Started at PORT : ${PORT}`));
 
 // kuch changes krne ke bad hame server ko restart karna padta hai us problem ko solve krne ke liye use nodemone (install nodemon)

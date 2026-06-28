@@ -9,10 +9,9 @@ const PORT = 8000;
 // Connection  -- Mongoose ka hoga
 
 mongoose
-.connect("mongodb://127.0.0.1:27017/youtube-kru-1")
-.then(()=> console.log("MongoDB connected"))
+.connect("mongodb://127.0.0.1:27017/youtube-kru-1")      // connect kiya using url 
+.then(()=> console.log("MongoDB connected"))             // use kiya then and catch  (like try catch)   
 .catch((err) => console.log("Mongo Error",err));
-
 
 
 // Schema      // -- MongoDB lecture --
@@ -117,23 +116,31 @@ app
 
 
 
-app.post('/api/users', (req, res) => {
+app.post('/api/users', async(req, res) => {
     const body = req.body;
     if(!body.first_name || !body.last_name || !body.email || !body.gender || !body.job_title ){
         return res.status(400).json({msg: "All fields are required"});
     };
 
-    users.push({
-        ...body,
-        id: users.length + 1,
+    const result = await User.create({
+        firstName:body.first_name,
+        lastName:body.last_name ,
+        email:body.email,
+        gender:body.gender,
+        jobTitle:body.job_title,
     });
+    
+    console.log("result"+ result);
 
-    fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err,data) => {
-        if (err) {
-            return res.status(500).json({ status: "Error writing file" });
-        }
-        return res.status(201).json({ status:"success",id: users.length});
-    });
+    return res.status(201).json({msg:"Success"});
+
+    // users.push({ ...body, id: users.length + 1,});
+    // fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err,data) => {
+    //     if (err) {
+    //         return res.status(500).json({ status: "Error writing file" });
+    //     }
+    //     return res.status(201).json({ status:"success",id: users.length});
+    // });
 });
  
 

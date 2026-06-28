@@ -64,12 +64,12 @@ app.get('/users',async(req,res) => {             // jab hum await ka use krte ha
 
 // REST API
 
-app.get('/api/users',(req,res)=>{
-    
+app.get('/api/users',async(req,res)=>{
+    const allDbUsers = await User.find ({}); 
     res.setHeader("X-MyName","Krushna mahalle");  // Custom Header
     // Always add X to custum headers
 
-    return res.json(users);
+    return res.json(allDbUsers);
 });
 
 

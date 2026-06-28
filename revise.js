@@ -134,4 +134,13 @@ studentInfo.Pavan
 studentInfo.Sarthak
 studentInfo.Rohan
 
-//
+// Inbuild object 
+
+let num = Math.random();
+num *10;
+num = Math.floor(num);
+
+console.log("print random number: "+num);
+
+let random = Math.floor(Math.random()*10)+1;
+console.log("Another random number : "+random);

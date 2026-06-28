@@ -133,6 +133,7 @@ console.log(studentInfo.Krushna);
 console.log(studentInfo.Pavan);
 console.log(studentInfo.Sarthak);
 console.log(studentInfo.Rohan);
+console.log(studentInfo.Krushna.name);
 
 // Inbuild object 
 

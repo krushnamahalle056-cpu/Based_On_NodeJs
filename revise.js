@@ -127,20 +127,22 @@ let studentInfo ={
 }
 
 // Object call 
-
-studentInfo.Krushna
-studentInfo.Harion
-studentInfo.Pavan
-studentInfo.Sarthak
-studentInfo.Rohan
+console.log(studentInfo);
+console.log(studentInfo.Harion);
+console.log(studentInfo.Krushna);
+console.log(studentInfo.Pavan);
+console.log(studentInfo.Sarthak);
+console.log(studentInfo.Rohan);
 
 // Inbuild object 
 
+// first method
 let num = Math.random();
 num *10;
-num = Math.floor(num);
-
+num = Math.floor(num) + 1;
 console.log("print random number: "+num);
 
+// seconde method is best
+
 let random = Math.floor(Math.random()*10)+1;
-console.log("Another random number : "+random);
+console.log("Another random number : "+ random);

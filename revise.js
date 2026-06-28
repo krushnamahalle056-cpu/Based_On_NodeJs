@@ -180,7 +180,7 @@ switch(random){
     case 7:{
         console.log("My Best Friend Name is Kashish");
     }
-    default{
+    default:{
         console.log("Number is 8 and 9");
     }
 }

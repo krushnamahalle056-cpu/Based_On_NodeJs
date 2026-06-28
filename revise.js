@@ -125,3 +125,13 @@ let studentInfo ={
     }
  
 }
+
+// Object call 
+
+studentInfo.Krushna
+studentInfo.Harion
+studentInfo.Pavan
+studentInfo.Sarthak
+studentInfo.Rohan
+
+//

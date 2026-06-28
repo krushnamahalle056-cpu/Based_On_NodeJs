@@ -134,13 +134,6 @@ app.post('/api/users', async(req, res) => {
 
     return res.status(201).json({msg:"Success"});
 
-    // users.push({ ...body, id: users.length + 1,});
-    // fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err,data) => {
-    //     if (err) {
-    //         return res.status(500).json({ status: "Error writing file" });
-    //     }
-    //     return res.status(201).json({ status:"success",id: users.length});
-    // });
 });
  
 

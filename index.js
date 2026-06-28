@@ -64,52 +64,34 @@ app.get('/users',async(req,res) => {             // jab hum await ka use krte ha
 
 // REST API
 
-app.get('/api/users',async(req,res)=>{
+app.get('/api/users', async(req,res)=>{
     const allDbUsers = await User.find ({}); 
-    res.setHeader("X-MyName","Krushna mahalle");  // Custom Header
-    // Always add X to custum headers
-
+    // res.setHeader("X-MyName","Krushna mahalle");  // Custom Header
+    // // Always add X to custum headers
     return res.json(allDbUsers);
 });
 
 
 app
 .route('/api/users/:id')
-.get((req,res) => {
-    const id = Number( req.params.id);
-    const user = users.find((user) => user.id === id);
+.get(async(req,res) => {
+    // const id = Number( req.params.id);
+    // const user = users.find((user) => user.id === id);
+
+    const user = await User.findById(req.params.id);
     if(!user){
         return res.status(404).json({error: "User not found"});
     }
     return res.json(user);
 })
-.patch((req,res)=>{
-    const id = Number(req.params.id);
-    const user = users.find((user) => user.id === id);
-    if (!user) {
-        return res.status(404).json({ error: "User not found" });
-    }
-    const body = req.body;
-    console.log(user);
-    console.log(req.body);
-    Object.assign(user, body);
-    fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err, data) => {
-        return res.json(user);
-    });
+.patch(async(req,res)=>{
+    await User.findByIdAndUpdate(req.params.id , { lastName:"Changed"});
+    return res.json({status: "Success"});
 })
-.delete((req,res)=>{
-    const id = Number(req.params.id);
-    const index = users.findIndex((user) => user.id === id);
-    if (index === -1) {
-        return res.status(404).json({ error: "User not found" });
-    }
-    users.splice(index, 1);
-    fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err, data) => {
-        return res.json({ status: "success" });
-    });
+.delete(async(req,res)=>{
+    await User.findByIdAndDelete(req.params.id);
+    return res.json({status: "Success"});
 });
-
-
 
 app.post('/api/users', async(req, res) => {
     const body = req.body;

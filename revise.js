@@ -72,3 +72,8 @@ function adition() {
 } ;
 
 adition();
+
+const multiplication=()=>{
+    let d = a*b;
+    console.log("multiplication of a*b = "+ d);
+}

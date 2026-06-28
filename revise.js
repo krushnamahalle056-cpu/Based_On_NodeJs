@@ -78,4 +78,4 @@ const multiplication=()=>{
     console.log("multiplication of a*b = "+ d);
 }
 
-console.log(multiplication);
+console.log(multiplication );

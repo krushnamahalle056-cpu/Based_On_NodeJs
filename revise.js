@@ -92,7 +92,7 @@ let studentInfo ={
     },
 
     Harion:{
-        name:"krushna Mahalle",
+        name:"Hariom Narwade",
         cast: "OBC",
         Eduction : "B tech",
         branch : "Electronics and tellicommunition of Engineering",
@@ -101,18 +101,18 @@ let studentInfo ={
 
     
     Pavan:{
-        name:"krushna Mahalle",
-        cast: "OBC",
+        name:"Pavan Lokhande",
+        cast: "NT",
         Eduction : "B tech",
         branch : "Electronics and tellicommunition of Engineering",
         age : 20,
     },
 
     Sarthak:{
-        name:"krushna Mahalle",
+        name:"Sarthak tayde",
         cast: "OBC",
         Eduction : "B tech",
-        branch : "Electronics and tellicommunition of Engineering",
+        branch : "Computer Engineering",
         age : 20,
     },
 

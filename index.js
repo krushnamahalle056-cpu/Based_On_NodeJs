@@ -1,9 +1,44 @@
 const express = require("express");
 const fs = require("fs");
+const mongoose = require("mongoose");
 const users = require("./MOCK_DATA.json");
 
 const app = express();
 const PORT = 8000;
+
+// Connection  -- Mongoose ka hoga
+
+mongoose
+.connect("mongodb://127.0.0.1:27017/youtube-kru-1")
+.then(()=> console.log("MongoDB connected"))
+.catch((err) => console.log("Mongo Error",err));
+
+
+
+// Schema      // -- MongoDB lecture --
+
+const userSchema = new mongoose.Schema({
+    firstName: {
+        type : String,
+        required : true,   // require true means firstName jaruri hai 
+    },
+    lastName : {
+        type : String,
+    },
+    email:{
+        type : String,
+        require : true,    // require true means email jaruri hai 
+        unique: true,     // unique true means koi same email id nhi bana sakta
+    },
+    jobTitle:{
+        type: String
+    },
+    gender:{
+        type : String
+    }
+});
+
+const User = mongoose.model('user', userSchema);
 
 // Midelware - Plugin
 app.use(express.urlencoded({extended:false}));

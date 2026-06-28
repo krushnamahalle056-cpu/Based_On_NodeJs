@@ -78,4 +78,17 @@ const multiplication=()=>{
     console.log("multiplication of a*b = "+ d);
 }
 
-console.log(multiplication );
+multiplication();
+
+// Object concet revision 
+
+let studentInfo ={
+    Krushna: {
+        name:"krushna Mahalle",
+        cast: "OBC",
+        Eduction : "B tech",
+        branch : "Electronics and tellicommunition of Engineering",
+        age : 20,
+    },
+
+}

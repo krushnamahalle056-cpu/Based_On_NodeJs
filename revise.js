@@ -91,4 +91,13 @@ let studentInfo ={
         age : 20,
     },
 
+    Harion:{
+        name:"krushna Mahalle",
+        cast: "OBC",
+        Eduction : "B tech",
+        branch : "Electronics and tellicommunition of Engineering",
+        age : 20,
+    },
+
+
 }

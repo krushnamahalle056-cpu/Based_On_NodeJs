@@ -114,6 +114,14 @@ let studentInfo ={
         Eduction : "B tech",
         branch : "Electronics and tellicommunition of Engineering",
         age : 20,
+    },
+
+    Rohan :{
+        name:"Rohan shinde",
+        cast: "OPEN",
+        Eduction : "B tech",
+        branch : "Computer Engineering",
+        age : 20,
     }
  
 }

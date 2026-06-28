@@ -70,14 +70,6 @@ app.get('/api/users',(req,res)=>{
 });
 
 
-// // // niche ka pura code different way main likha hai
-// app.get('/api/users/:id', (req,res) =>{
-//     const id = Number( req.params.id);
-//     const user = users.find((user) => user.id === id);
-//     return res.json(user);
-// });
-
-
 app
 .route('/api/users/:id')
 .get((req,res) => {
@@ -136,7 +128,6 @@ app.post('/api/users', async(req, res) => {
 
 });
  
-
 
 app.listen(PORT,()=>console.log(`Server Started at PORT : ${PORT}`));
 

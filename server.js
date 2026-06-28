@@ -28,28 +28,18 @@ app.get("/api/users", (req, res) => {
 
 // Create User
 app.post("/api/users", (req, res) => {
-
     const body = req.body;
-
-    const newUser = {
-        id: users.length + 1,
-        ...body,
-    };
-
-    users.push(newUser);
+    const newUser = { id: users.length + 1, ...body, };
+    sers.push(newUser);
 
     fs.writeFile("./MOCK_DATA.json", JSON.stringify(users, null, 2), (err) => {
-
         if (err) {
             return res.status(500).json({
                 message: "Failed to save user"
             });
         }
 
-        return res.status(201).json({
-            status: "success",
-            user: newUser,
-        });
+        return res.status(201).json({status: "success",user: newUser,});
 
     });
 
@@ -140,4 +130,4 @@ app.route("/api/users/:id")
 
 app.listen(PORT, () => {
     console.log(`Server Started at PORT : ${PORT}`);
-});
+});     

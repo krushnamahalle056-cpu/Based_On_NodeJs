@@ -1,7 +1,7 @@
 const express = require("express");
 const fs = require("fs");
 const mongoose = require("mongoose");
-const users = require("./MOCK_DATA.json");
+// const users = require("./MOCK_DATA.json");   // MongoDB ke bad ab iska koi kam nhi hai 
 
 const app = express();
 const PORT = 8000;
@@ -52,10 +52,11 @@ app.use(express.urlencoded({extended:false}));
 
 // Routes
 
-app.get('/users',(req,res) => {
+app.get('/users',async(req,res) => {             // jab hum await ka use krte hai tab hame async function chahiye hota hai
+    const allDbUsers = await User.find ({});     //  ({})  ye empti ka matlab sabhi users find krne hai
     const html = `
     <ul>
-        ${users.map((user) => `<li>${user.first_name}</li>`).join(" ")}
+        ${allDbUsers.map((user) => `<li>${user.firstName} - ${user.email}</li>`).join(" ")}
     </ul>
     `;
     res.send(html);
@@ -123,8 +124,6 @@ app.post('/api/users', async(req, res) => {
         gender:body.gender,
         jobTitle:body.job_title,
     });
-    
-    console.log("result"+ result);
 
     return res.status(201).json({msg:"Success"});
 

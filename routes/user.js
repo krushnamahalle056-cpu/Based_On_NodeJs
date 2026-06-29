@@ -1,5 +1,11 @@
 const express = require("express");
-const {handelGetAllUsers, getUserById, handlePostUser} = require("../controllers/user");
+const {
+    handleGetAllUsers,
+    handleGetUserById,
+    handleUpdateUserById,
+    handleDeleteUserById, 
+    handleCreateNewUser ,
+} = require("../controllers/user");
 
 const router = express.Router();
 
@@ -20,16 +26,16 @@ const router = express.Router();
 // REST API
 
 
-router.get('/', handleGetAllUsers , handleGetUserById, handlePatchUserById, handleDeleteUserById );         //   '/' ka matlab sabhi users milege
+router.get('/', handleGetAllUsers );         //   '/' ka matlab sabhi users milege
 
 router
 .route('/:id')
 .get(handleGetUserById)
-.patch(handlePatchUserById)
+.patch(handleUpdateUserById)
 .delete(handleDeleteUserById);
 
 
-router.post('/',handlePostUser);
+router.post('/',handleCreateNewUser);
  
 
 module.exports = router;

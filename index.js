@@ -21,11 +21,6 @@ app.use(express.urlencoded({extended:false}));
 
 app.use(logReqRes("log.txt"));
 
-// // I create a middleware 
-// app.use((req,res,next) =>{
-//     console.log("this is middlewere");
-//     return next();
-// })
 
 // //Routes
 

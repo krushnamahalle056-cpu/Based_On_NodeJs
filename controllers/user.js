@@ -13,7 +13,7 @@ async function handleGetUserById(req, res){
     return res.json(user);
 }
 
-async function handlePatchUserById(req, res){
+async function handleUpdateUserById(req, res){
     await User.findByIdAndUpdate(req.params.id , { lastName:"Changed"});
     return res.json({status: "Success"});
 }
@@ -23,7 +23,7 @@ async function handleDeleteUserById(req, res){
     return res.json({status: "Success"});
 }
 
-async function handlePostUser(req, res){
+async function handleCreateNewUser(req, res){
     const body = req.body;
     if(!body.first_name || !body.last_name || !body.email || !body.gender || !body.job_title ){
         return res.status(400).json({msg: "All fields are required"});
@@ -37,16 +37,15 @@ async function handlePostUser(req, res){
         jobTitle:body.job_title,
     });
 
-    return res.status(201).json({msg:"Success"});
+    return res.status(201).json({msg:"Success" , id: result._id });
 
 }
 
 module.exports = {
     handleGetAllUsers,
     handleGetUserById,
-    handlePatchUserById,
+    handleUpdateUserById,
     handleDeleteUserById,
-    handlePostUser,
-
+    handleCreateNewUser,
 
 }

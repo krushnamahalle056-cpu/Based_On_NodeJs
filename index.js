@@ -15,37 +15,6 @@ const PORT = 8000;
 connectMongoDb("mongodb://127.0.0.1:27017/youtube-kru-1")
 
 
-// // niche ka comment models folder main hai
-
-
-// //Schema      // -- MongoDB lecture --
-// 
-// const userSchema = new mongoose.Schema({
-        // firstName: {
-            // type : String,
-            // required : true,   // require true means firstName jaruri hai 
-        // },
-        // lastName : {
-            // type : String,
-        // },
-        // email:{
-            // type : String,
-            // require : true,    // require true means email jaruri hai 
-            // unique: true,     // unique true means koi same email id nhi bana sakta
-        // },
-        // jobTitle:{
-            // type: String
-        // },
-        // gender:{
-            // type : String
-        // }
-    // },
-    // {timestamps: true}   // timestamps is use for id kitne baje create hui thi our kitne baje update hui thi  (additional info about user id)
-// );     
-
-// const User = mongoose.model('user', userSchema);
-
-
 
 // Midelware - Plugin
 app.use(express.urlencoded({extended:false}));

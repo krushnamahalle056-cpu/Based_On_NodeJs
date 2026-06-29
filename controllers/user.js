@@ -13,6 +13,12 @@ async function handleGetUserById(req, res){
     return res.json(user);
 }
 
+async function handlePatchUserById(req, res){
+    await User.findByIdAndUpdate(req.params.id , { lastName:"Changed"});
+    return res.json({status: "Success"});
+}
+
+
 
 module.exports = {
     handelGetAllUsers,

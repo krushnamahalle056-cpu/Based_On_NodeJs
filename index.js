@@ -10,15 +10,13 @@ const {logReqRes} = require("./Middleware/index");
 const app = express();
 const PORT = 8000;
 
+
 // // Connection  -- Mongoose ka hoga
 
 connectMongoDb("mongodb://127.0.0.1:27017/youtube-kru-1")
 
-
-
 // Midelware - Plugin
 app.use(express.urlencoded({extended:false}));
-
 app.use(logReqRes("log.txt"));
 
 
@@ -27,6 +25,5 @@ app.use(logReqRes("log.txt"));
 app.use("./user", userRouter);
 
  
-
 app.listen(PORT,()=>console.log(`Server Started at PORT : ${PORT}`));
 

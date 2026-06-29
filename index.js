@@ -38,14 +38,6 @@ app.get('/users',async(req,res) => {             // jab hum await ka use krte ha
     res.send(html);
 });
 
-//REST API
-
-app.get('/api/users', async(req,res)=>{
-    const allDbUsers = await User.find ({}); 
-   res.setHeader("X-MyName","Krushna mahalle");  // Custom Header
-   
-    return res.json(allDbUsers);
-});
 
 
 app

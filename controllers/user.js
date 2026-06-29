@@ -23,8 +23,30 @@ async function handleDeleteUserById(req, res){
     return res.json({status: "Success"});
 }
 
+async function handlePostUser(req, res){
+    const body = req.body;
+    if(!body.first_name || !body.last_name || !body.email || !body.gender || !body.job_title ){
+        return res.status(400).json({msg: "All fields are required"});
+    };
+
+    const result = await User.create({
+        firstName:body.first_name,
+        lastName:body.last_name ,
+        email:body.email,
+        gender:body.gender,
+        jobTitle:body.job_title,
+    });
+
+    return res.status(201).json({msg:"Success"});
+
+}
+
 module.exports = {
-    handelGetAllUsers,
-    getUserById,
+    handleGetAllUsers,
+    handleGetUserById,
+    handlePatchUserById,
+    handleDeleteUserById,
+    handlePostUser,
+
 
 }

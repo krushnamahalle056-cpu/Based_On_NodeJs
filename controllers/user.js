@@ -18,7 +18,10 @@ async function handlePatchUserById(req, res){
     return res.json({status: "Success"});
 }
 
-
+async function handleDeleteUserById(req, res){
+    await User.findByIdAndDelete(req.params.id);
+    return res.json({status: "Success"});
+}
 
 module.exports = {
     handelGetAllUsers,

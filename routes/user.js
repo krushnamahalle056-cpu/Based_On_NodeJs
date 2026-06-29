@@ -1,5 +1,5 @@
 const express = require("express");
-const {handelGetAllUsers, getUserById} = require("../controllers/user");
+const {handelGetAllUsers, getUserById, handlePostUser} = require("../controllers/user");
 
 const router = express.Router();
 
@@ -29,26 +29,7 @@ router
 .delete(handleDeleteUserById);
 
 
-router.post('/', async(req, res) => {
-    const body = req.body;
-    if(!body.first_name || !body.last_name || !body.email || !body.gender || !body.job_title ){
-        return res.status(400).json({msg: "All fields are required"});
-    };
-
-
-    const result = await User.create({
-        firstName:body.first_name,
-        lastName:body.last_name ,
-        email:body.email,
-        gender:body.gender,
-        jobTitle:body.job_title,
-    });
-
-
-    return res.status(201).json({msg:"Success"});
-
-
-});
+router.post('/',handlePostUser);
  
 
 module.exports = router;

@@ -1,5 +1,5 @@
 const express = require("express");
-const {handelGetAllUsers} = require("../controllers/user");
+const {handelGetAllUsers, getUserById} = require("../controllers/user");
 
 const router = express.Router();
 
@@ -20,21 +20,11 @@ const router = express.Router();
 // REST API
 
 
-router.get('/', handelGetAllUsers);         //   '/' ka matlab sabhi users milege
+router.get('/', handleGetAllUsers , handleGetUserById,);         //   '/' ka matlab sabhi users milege
 
 router
 .route('/:id')
-.get(async(req,res) => {
-    // const id = Number( req.params.id);
-    // const user = users.find((user) => user.id === id);
-
-
-    const user = await User.findById(req.params.id);
-    if(!user){
-        return res.status(404).json({error: "User not found"});
-    }
-    return res.json(user);
-})
+.get(handleGetUserById)
 .patch(async(req,res)=>{
     await User.findByIdAndUpdate(req.params.id , { lastName:"Changed"});
     return res.json({status: "Success"});

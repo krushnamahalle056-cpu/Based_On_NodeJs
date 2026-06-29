@@ -88,5 +88,3 @@ app.use("./user", userRouter);
 
 app.listen(PORT,()=>console.log(`Server Started at PORT : ${PORT}`));
 
-// kuch changes krne ke bad hame server ko restart karna padta hai us problem ko solve krne ke liye use nodemone (install nodemon)
-// nodemon kya krta hai jab bhi hum file main changes krte hai our save krte hai to atuomaticaly run hota hai  lekin pahle npm start krna padta hai

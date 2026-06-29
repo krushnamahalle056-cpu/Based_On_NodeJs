@@ -1,4 +1,5 @@
 const express = require("express");
+const {handelGetAllUsers} = require("../controllers/user");
 
 const router = express.Router();
 
@@ -19,13 +20,7 @@ const router = express.Router();
 // REST API
 
 
-router.get('/', async(req,res)=>{                   //   '/' ka matlab sabhi users milege
-    const allDbUsers = await User.find ({}); 
-    return res.json(allDbUsers);
-});
-
-
-
+router.get('/', handelGetAllUsers);         //   '/' ka matlab sabhi users milege
 
 router
 .route('/:id')

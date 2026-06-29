@@ -20,15 +20,12 @@ const router = express.Router();
 // REST API
 
 
-router.get('/', handleGetAllUsers , handleGetUserById,);         //   '/' ka matlab sabhi users milege
+router.get('/', handleGetAllUsers , handleGetUserById, handlePatchUserById, );         //   '/' ka matlab sabhi users milege
 
 router
 .route('/:id')
 .get(handleGetUserById)
-.patch(async(req,res)=>{
-    await User.findByIdAndUpdate(req.params.id , { lastName:"Changed"});
-    return res.json({status: "Success"});
-})
+.patch(handlePatchUserById)
 .delete(async(req,res)=>{
     await User.findByIdAndDelete(req.params.id);
     return res.json({status: "Success"});

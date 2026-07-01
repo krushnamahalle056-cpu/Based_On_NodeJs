@@ -1,5 +1,7 @@
 const fs = require ("fs");
 
+// Middleware  
+
 function logReqRes(filename){
     return (req, res, next) =>{
         fs.appendFile(

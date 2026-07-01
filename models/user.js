@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
+
+
 // Schema      // -- MongoDB lecture --
-
-
 
 const userSchema = new mongoose.Schema({
 

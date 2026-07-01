@@ -1,5 +1,7 @@
 const User = require("../models/user");   // '../' means ek directory piche jana
 
+// This is methods
+
 async function handleGetAllUsers(req, res){
     const allDbUsers = await User.find ({}); 
     return res.json(allDbUsers);

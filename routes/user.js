@@ -2,7 +2,7 @@ const express = require("express");
 const {
     handleGetAllUsers,
     handleGetUserById,
-    handleUpdateUserById,
+    handleUpdateUserById,         // He aapn saglya file la require kel aahe 
     handleDeleteUserById, 
     handleCreateNewUser ,
 } = require("../controllers/user");

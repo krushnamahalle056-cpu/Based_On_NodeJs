@@ -206,21 +206,25 @@ let obj = {
         name: "krushna",
         lastName: "Mahalle",
         age: 20,
-        
+        hobbies: ["coding","picture","travel"],
     },
     secondStudent:{
         name: "sarthak",
         lastName: "tayde",
         age: 20,
+        hobbies: ["gaming","music","travel"],
     },
     thirdStudent:{
         name: "pavan",
         lastName: "lokhande",
         age: 20,
+        hobbies: ["reading","swimming","cooking"],
     },
     fourthStudent:{
         name: "hariom",
         lastName: "shinde",
         age: 20,
+        hobbies: ["drawing","cycling","travel"],
     },
+
 }

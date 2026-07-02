@@ -186,16 +186,16 @@
 // }
 
 
-const myFacMovie = "Krish";
-let guess = prompt("Guess my favourite movie name");
+const prompt = require("prompt-sync")();
 
-while(true){
-    if(guess !== myFacMovie){
-        guess = prompt("Wrong guess! Try again:");
-    }else if (guess === myFacMovie){
+const myFavMovie = "Krish";
+let guess = prompt("Guess my favourite movie name: ");
+
+while (true) {
+    if (guess !== myFavMovie) {
+        guess = prompt("Wrong guess! Try again: ");
+    } else {
         console.log("Congratulations! You guessed it right!");
         break;
-    }else{
-        console.log("Invalid input. Please try optin :1.M.S Dhoni 2. Krish 3. Bahubali");
     }
 }

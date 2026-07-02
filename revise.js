@@ -208,5 +208,10 @@ let obj = {
         age: 20,
         
     },
+    secondStudent:{
+        name: "sarthak",
+        lastName: "tayde",
+        age: 20,
+    },
     
 }

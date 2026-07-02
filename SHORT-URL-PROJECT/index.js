@@ -14,6 +14,10 @@ app.use(express.json());
 
 app.use("/url", URLRoutes);
 
+app.get("/:shortId", async(req, res) =>{
+    const shortId = req.params.shortId;
+   await URL.findOneAndUpdate({shortId: shortId}, {$push: {visitHistory: {timestamp: Date.now()}}});
+});
 
 app.listen(PORT, () => console.log(`Server Started at PORT =${PORT}`))
 

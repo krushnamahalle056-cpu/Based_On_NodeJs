@@ -222,7 +222,7 @@ let obj = {
     },
     fourthStudent:{
         name: "hariom",
-        lastName: "shinde",
+        lastName: "Narwade",
         age: 20,
         hobbies: ["drawing","cycling","travel"],
     },

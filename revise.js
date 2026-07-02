@@ -218,5 +218,9 @@ let obj = {
         lastName: "lokhande",
         age: 20,
     },
-   
+    fourthStudent:{
+        name: "hariom",
+        lastName: "shinde",
+        age: 20,
+    },
 }

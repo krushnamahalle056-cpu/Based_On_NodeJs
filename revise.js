@@ -213,5 +213,10 @@ let obj = {
         lastName: "tayde",
         age: 20,
     },
-    
+    thirdStudent:{
+        name: "pavan",
+        lastName: "lokhande",
+        age: 20,
+    },
+   
 }

@@ -201,3 +201,12 @@
 // }
 
 
+let obj = {
+    fistStudent:{
+        name: "krushna",
+        lastName: "Mahalle",
+        age: 20,
+        
+    },
+    
+}

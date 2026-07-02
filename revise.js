@@ -184,3 +184,18 @@
 //         console.log("Number is 8 and 9");
 //     }
 // }
+
+
+const myFacMovie = "Krish";
+let guess = prompt("Guess my favourite movie name");
+
+while(true){
+    if(guess !== myFacMovie){
+        guess = prompt("Wrong guess! Try again:");
+    }else if (guess === myFacMovie){
+        console.log("Congratulations! You guessed it right!");
+        break;
+    }else{
+        console.log("Invalid input. Please try optin :1.M.S Dhoni 2. Krish 3. Bahubali");
+    }
+}

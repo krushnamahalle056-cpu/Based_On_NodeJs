@@ -4,3 +4,9 @@ H2{
     align-items: center;
     font-family: 'Courier New', Courier, monospace;
 }
+
+p{
+    color: blue;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+}

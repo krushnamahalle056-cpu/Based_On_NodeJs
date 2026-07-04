@@ -80,51 +80,51 @@
 
 // multiplication();
 
-// // Object concet revision 
+// Object concet revision 
 
-// let studentInfo ={
-//     Krushna: {
-//         name:"krushna Mahalle",
-//         cast: "OBC",
-//         Eduction : "B tech",
-//         branch : "Electronics and tellicommunition of Engineering",
-//         age : 20,
-//     },
+let studentInfo ={
+    Krushna: {
+        name:"krushna Mahalle",
+        cast: "OBC",
+        Eduction : "B tech",
+        branch : "Electronics and tellicommunition of Engineering",
+        age : 20,
+    },
 
-//     Harion:{
-//         name:"Hariom Narwade",
-//         cast: "OBC",
-//         Eduction : "B tech",
-//         branch : "Electronics and tellicommunition of Engineering",
-//         age : 20,
-//     },
+    Harion:{
+        name:"Hariom Narwade",
+        cast: "OBC",
+        Eduction : "B tech",
+        branch : "Electronics and tellicommunition of Engineering",
+        age : 20,
+    },
 
     
-//     Pavan:{
-//         name:"Pavan Lokhande",
-//         cast: "NT",
-//         Eduction : "B tech",
-//         branch : "Electronics and tellicommunition of Engineering",
-//         age : 20,
-//     },
+    Pavan:{
+        name:"Pavan Lokhande",
+        cast: "NT",
+        Eduction : "B tech",
+        branch : "Electronics and tellicommunition of Engineering",
+        age : 20,
+    },
 
-//     Sarthak:{
-//         name:"Sarthak tayde",
-//         cast: "OBC",
-//         Eduction : "B tech",
-//         branch : "Computer Engineering",
-//         age : 20,
-//     },
+    Sarthak:{
+        name:"Sarthak tayde",
+        cast: "OBC",
+        Eduction : "B tech",
+        branch : "Computer Engineering",
+        age : 20,
+    },
 
-//     Rohan :{
-//         name:"Rohan shinde",
-//         cast: "OPEN",
-//         Eduction : "B tech",
-//         branch : "Computer Engineering",
-//         age : 20,
-//     }
+    Rohan :{
+        name:"Rohan shinde",
+        cast: "OPEN",
+        Eduction : "B tech",
+        branch : "Computer Engineering",
+        age : 20,
+    }
  
-// }
+}
 
 // // Object call 
 // console.log(studentInfo);

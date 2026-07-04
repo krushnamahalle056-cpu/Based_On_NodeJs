@@ -57,14 +57,14 @@
 // let classmates = [["Hariom","pavan","krushna","Kashish"],["sarthak","Aishwarya","Shreya"]];
 // console.log(classmates);
 
-// let n = 20;
-// console.log(`table of ${n}:\n`);
-// for(let i=n; i<= n*10; i=i+n){
-//     console.log(i);
-// }
+let n = 20;
+console.log(`table of ${n}:\n`);
+for(let i=n; i<= n*10; i=i+n){
+    console.log(i);
+}
 
-// // Now start the revision of function 
-// let a=34 , b=2;
+// Now start the revision of function 
+let a=34 , b=2;
 
 function adition() {
     let c=a+b;

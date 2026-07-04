@@ -66,12 +66,12 @@
 // // Now start the revision of function 
 // let a=34 , b=2;
 
-// function adition() {
-//     let c=a+b;
-//     console.log("addition of two numbers: "+c);
-// } ;
+function adition() {
+    let c=a+b;
+    console.log("addition of two numbers: "+c);
+} ;
 
-// adition();
+adition();
 
 const multiplication=()=>{
     let d = a*b;
@@ -80,7 +80,7 @@ const multiplication=()=>{
 
 multiplication();
 
-// Object concet revision 
+// Object concept revision 
 
 let studentInfo ={
     Krushna: {

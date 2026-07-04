@@ -149,41 +149,41 @@
 // console.log("Another random number : "+ random);
 
 
-// // New small project 
+// New small project 
 
-// switch(random){
-//     case 1:{
-//         console.log("I love you MOM");
-//     }
-//     break;
+switch(random){
+    case 1:{
+        console.log("I love you MOM");
+    }
+    break;
 
-//     case 2:{
-//         console.log("I Love You Pappa");
-//     }
-//     break;
-//     case 3:{
-//         console.log("I Love you shilpa tai");
-//     }
-//     break;
-//     case 4:{
-//         console.log("I love Rani tai");
-//     }
-//     break;
-//     case 5:{
-//         console.log("I love you Lavanya Dada");
-//     }
-//     break;
-//     case 6:{
-//         console.log("I Love you Krushna");
-//     }
-//     break;
-//     case 7:{
-//         console.log("My Best Friend Name is Kashish");
-//     }
-//     default:{
-//         console.log("Number is 8 and 9");
-//     }
-// }
+    case 2:{
+        console.log("I Love You Pappa");
+    }
+    break;
+    case 3:{
+        console.log("I Love you shilpa tai");
+    }
+    break;
+    case 4:{
+        console.log("I love Rani tai");
+    }
+    break;
+    case 5:{
+        console.log("I love you Lavanya Dada");
+    }
+    break;
+    case 6:{
+        console.log("I Love you Krushna");
+    }
+    break;
+    case 7:{
+        console.log("My Best Friend Name is Kashish");
+    }
+    default:{
+        console.log("Number is 8 and 9");
+    }
+}
 
 
 const prompt = require("prompt-sync")();

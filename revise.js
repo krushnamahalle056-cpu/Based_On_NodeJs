@@ -135,18 +135,18 @@
 // console.log(studentInfo.Rohan);
 // console.log(studentInfo.Krushna.name);
 
-// // Inbuild object 
+// Inbuild object 
 
-// // first method
-// let num = Math.random();
-// num *10;
-// num = Math.floor(num) + 1;
-// console.log("print random number: "+num);
+// first method
+let num = Math.random();
+num *10;
+num = Math.floor(num) + 1;
+console.log("print random number: "+num);
 
-// // seconde method is best
+// seconde method is best
 
-// let random = Math.floor(Math.random()*10)+1;
-// console.log("Another random number : "+ random);
+let random = Math.floor(Math.random()*10)+1;
+console.log("Another random number : "+ random);
 
 
 // New small project 

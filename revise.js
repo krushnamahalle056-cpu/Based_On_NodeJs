@@ -73,12 +73,12 @@
 
 // adition();
 
-// const multiplication=()=>{
-//     let d = a*b;
-//     console.log("multiplication of a*b = "+ d);
-// }
+const multiplication=()=>{
+    let d = a*b;
+    console.log("multiplication of a*b = "+ d);
+}
 
-// multiplication();
+multiplication();
 
 // Object concet revision 
 

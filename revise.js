@@ -186,19 +186,19 @@
 // }
 
 
-// const prompt = require("prompt-sync")();
+const prompt = require("prompt-sync")();
 
-// const myFavMovie = "Krish";
-// let guess = prompt("Guess my favourite movie name: ");
+const myFavMovie = "Krish";
+let guess = prompt("Guess my favourite movie name: ");
 
-// while (true) {
-//     if (guess !== myFavMovie) {
-//         guess = prompt("Wrong guess! Try again: ");
-//     } else {
-//         console.log("Congratulations! You guessed it right!");
-//         break;
-//     }
-// }
+while (true) {
+    if (guess !== myFavMovie) {
+        guess = prompt("Wrong guess! Try again: ");
+    } else {
+        console.log("Congratulations! You guessed it right!");
+        break;
+    }
+}
 
 
 let obj = {

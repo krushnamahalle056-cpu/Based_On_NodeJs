@@ -51,11 +51,11 @@
 // console.log(girls.splice(0,1));
 // console.log(girls);
 
-// let students = ["krushna","sarthak","Hariom", "pavan","Aishwarya","kashish","shreya","vishal"];
-// console.log(students.sort());
+let students = ["krushna","sarthak","Hariom", "pavan","Aishwarya","kashish","shreya","vishal"];
+console.log(students.sort());
 
-// let classmates = [["Hariom","pavan","krushna","Kashish"],["sarthak","Aishwarya","Shreya"]];
-// console.log(classmates);
+let classmates = [["Hariom","pavan","krushna","Kashish"],["sarthak","Aishwarya","Shreya"]];
+console.log(classmates);
 
 let n = 20;
 console.log(`table of ${n}:\n`);

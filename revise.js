@@ -235,3 +235,11 @@ let obj = {
 
 
 // Q. find adult or not 
+
+let n = prompt("Enter your age: ");
+if(n>=18){
+    console.log("You are adult");
+}else{
+    console.log("You are not adult");
+}
+

@@ -232,3 +232,6 @@ let obj = {
     },
 
 }
+
+
+// Q. find adult or not 

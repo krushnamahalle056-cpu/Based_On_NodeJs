@@ -245,3 +245,8 @@ if(n>=18){
 
 // Q. Print the table of given number 
 
+let n= prompt("Enter the number to print table: ");
+
+for(let i=1; i<=10; i++){
+    console.log(`${n} * ${i} = ${n*i}`);
+}

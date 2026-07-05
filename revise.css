@@ -1,3 +1,9 @@
+H1{
+    color: green;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
 H2{
     color:red;
     font-size: 24px;
@@ -10,3 +16,4 @@ p{
     font-size: 18px;
     font-family: 'Arial', sans-serif;
 }
+

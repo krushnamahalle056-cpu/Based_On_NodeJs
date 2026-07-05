@@ -51,6 +51,9 @@ console.log(boys.slice());
 console.log(girls.splice(0,1));
 console.log(girls);
 
+
+// Student info
+
 let students = ["krushna","sarthak","Hariom", "pavan","Aishwarya","kashish","shreya","vishal"];
 console.log(students.sort());
 

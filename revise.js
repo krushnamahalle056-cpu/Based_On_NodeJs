@@ -57,6 +57,7 @@ console.log(girls);
 let students = ["krushna","sarthak","Hariom", "pavan","Aishwarya","kashish","shreya","vishal"];
 console.log(students.sort());
 
+// classmates array 
 let classmates = [["Hariom","pavan","krushna","Kashish"],["sarthak","Aishwarya","Shreya"]];
 console.log(classmates);
 

@@ -243,3 +243,5 @@ if(n>=18){
     console.log("You are not adult");
 }
 
+// Q. Print the table of given number 
+

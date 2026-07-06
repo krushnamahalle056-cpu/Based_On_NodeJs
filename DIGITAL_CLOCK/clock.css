@@ -1,6 +1,11 @@
 h1{
+    position: absolute;
+    top: 30px;
+    color: white;
+    font-size: 40px;
     text-align: center;
-    color: #00ff99;
+    width: 100%;
+    text-shadow: 2px 2px 5px black;
 }
 
 body{

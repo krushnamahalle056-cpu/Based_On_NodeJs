@@ -257,3 +257,4 @@ let n = prompt("Enter the number to print table in reverse order: ");
 for(let i=10; i>=1; i--){
     console.log(`${n} * ${i} = ${n*i}`);
 }
+

@@ -12,4 +12,9 @@ body{
 .clock{
     color:#00ff99;
     font-size: 60px;
+    font-weight: bold;
+    background:#111;
+    padding: 20px 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #00ff99;
 }

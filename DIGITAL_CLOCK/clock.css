@@ -1,3 +1,8 @@
+h1{
+    text-align: center;
+    color: #00ff99;
+}
+
 body{
     margin: 0;
     display: flex;

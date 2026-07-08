@@ -17,6 +17,13 @@ h1{
     text-shadow: 2px 2px 5px black;
 }
 
+#greeting{
+    color:#fff;
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+
 body{
     margin: 0;
     display: flex;

@@ -15,8 +15,14 @@ function updateClock(){
 
     let greeting = "Good Evening";
 
-}
+    if(now.getHours() < 12)
+        greeting = "Good Morning";
+    else if(now.getHours() < 18)
+        greeting = "Good Afternoon";
 
+    document.getElementById("greeting").innerHTML = greeting;
+
+}
 
 
 setInterval(updateClock, 1000);

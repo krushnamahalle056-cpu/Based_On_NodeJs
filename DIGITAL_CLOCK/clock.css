@@ -41,6 +41,7 @@ body{
 }
 
 .clock{
+    animation: glow 1.5s infinite alternate;
     color:#00ff99;
     font-size: 60px;
     font-weight: bold;
@@ -48,4 +49,18 @@ body{
     padding: 20px 40px;
     border-radius: 15px;
     box-shadow: 0 0 20px #00ff99;
+}
+
+
+/* .clock{
+    animation: glow 1.5s infinite alternate;
+} */
+
+@keyframes glow{
+    from{
+        box-shadow:0 0 10px #00ff99;
+    }
+    to{
+        box-shadow:0 0 35px #00ff99;
+    }
 }

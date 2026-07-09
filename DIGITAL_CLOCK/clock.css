@@ -5,6 +5,21 @@
     font-family: Arial, sans-serif;
 }
 
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background:linear-gradient(-45deg,
+    #0f2027,
+    #203a43,
+    #2c5364,
+    #00c9ff);
+    background-size:400% 400%;
+    animation:bg 10s infinite alternate;
+}
+
 .container{
     background: rgba(255,255,255,0.1);
     padding:30px;

@@ -29,12 +29,16 @@ body{
 }
 
 .container{
-    background: rgba(255,255,255,0.1);
-    padding:30px;
-    border-radius:20px;
-    backdrop-filter: blur(10px);
+    position:relative;
+    z-index:10;
+    width:450px;
     text-align:center;
-    box-shadow:0 0 30px rgba(0,255,150,0.5);
+    padding:40px;
+    border-radius:20px;
+    background:rgba(255,255,255,.1);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.2);
+    box-shadow:0 0 30px rgba(0,255,255,.5);
 }
 
 h1{

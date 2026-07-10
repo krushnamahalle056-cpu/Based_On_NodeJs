@@ -121,3 +121,9 @@ height:40px;
 animation-duration:18s;
 }
 
+.circles li:nth-child(4){
+left:50%;
+width:70px;
+height:70px;
+}
+

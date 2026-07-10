@@ -131,3 +131,10 @@ height:70px;
 left:65%;
 }
 
+.circles li:nth-child(6){
+left:80%;
+width:100px;
+height:100px;
+animation-duration:20s;
+}
+

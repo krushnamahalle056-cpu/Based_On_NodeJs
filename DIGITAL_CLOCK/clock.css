@@ -114,3 +114,10 @@ left:20%;
 animation-duration:12s;
 }
 
+.circles li:nth-child(3){
+left:35%;
+width:40px;
+height:40px;
+animation-duration:18s;
+}
+

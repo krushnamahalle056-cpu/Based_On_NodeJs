@@ -90,3 +90,15 @@ height:100%;
 overflow:hidden;
 }
 
+.circles li{
+position:absolute;
+display:block;
+list-style:none;
+width:20px;
+height:20px;
+background:rgba(255,255,255,.2);
+bottom:-150px;
+animation:animate 25s linear infinite;
+border-radius:50%;
+}
+

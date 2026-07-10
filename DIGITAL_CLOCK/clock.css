@@ -148,3 +148,13 @@ width:30px;
 height:30px;
 }
 
+.circles li:nth-child(9){
+left:75%;
+}
+
+.circles li:nth-child(10){
+left:5%;
+width:60px;
+height:60px;
+}
+

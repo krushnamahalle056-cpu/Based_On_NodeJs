@@ -138,3 +138,13 @@ height:100px;
 animation-duration:20s;
 }
 
+.circles li:nth-child(7){
+left:90%;
+}
+
+.circles li:nth-child(8){
+left:45%;
+width:30px;
+height:30px;
+}
+

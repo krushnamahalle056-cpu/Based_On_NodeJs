@@ -102,3 +102,10 @@ animation:animate 25s linear infinite;
 border-radius:50%;
 }
 
+.circles li:nth-child(1){
+left:10%;
+width:80px;
+height:80px;
+animation-duration:15s;
+}
+

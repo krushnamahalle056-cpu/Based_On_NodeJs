@@ -53,6 +53,8 @@ document.getElementById("greeting").innerHTML=greeting;
 
 }
 
+
+
 setInterval(updateClock,1000);
 
 updateClock();

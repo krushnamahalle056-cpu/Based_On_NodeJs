@@ -53,8 +53,11 @@ document.getElementById("greeting").innerHTML=greeting;
 
 }
 
-
-
 setInterval(updateClock,1000);
 
 updateClock();
+
+// Theme Toggle
+
+const themeBtn = document.getElementById("themeBtn");
+

@@ -178,6 +178,11 @@ height:60px;
     box-shadow: 0 0 15px rgba(0,255,255,0.5);
 }
 
+#themeBtn:hover{
+    transform: rotate(180deg) scale(1.1);
+    background: rgba(255,255,255,0.3);
+    box-shadow: 0 0 25px cyan;
+}
 
 @keyframes animate{
 0%{

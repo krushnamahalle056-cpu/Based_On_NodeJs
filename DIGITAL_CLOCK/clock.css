@@ -184,6 +184,12 @@ height:60px;
     box-shadow: 0 0 25px cyan;
 }
 
+body.light #themeBtn{
+    color: #222;
+    background: rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
 @keyframes animate{
 0%{
 transform:translateY(0) rotate(0deg);

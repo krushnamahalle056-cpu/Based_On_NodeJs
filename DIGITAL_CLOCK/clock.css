@@ -229,3 +229,9 @@ body.light #formatBtn{
 body.light{
     background:linear-gradient(-45deg,#ffe259,#ffa751,#ffffff,#f6f8fc);
 }
+
+body.light h1,
+body.light #date{
+    color:#222;
+}
+

@@ -23,7 +23,7 @@ let m = String(now.getMinutes()).padStart(2,"0");
 let s = String(now.getSeconds()).padStart(2,"0");
 
 document.getElementById("clock").innerHTML =
-`${h}:${m}:${s}`;
+`${h}:${m}:${s}${ampm}`;
 
 const days=[
 "Sunday",

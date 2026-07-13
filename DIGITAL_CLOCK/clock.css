@@ -222,3 +222,6 @@ opacity:0;
     box-shadow:0 0 25px cyan;
 }
 
+body.light #formatBtn{
+    color:black;
+}

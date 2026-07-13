@@ -1,3 +1,4 @@
+
 function updateClock(){
 const now = new Date();
 let h = String(now.getHours()).padStart(2,"0");
@@ -72,3 +73,16 @@ themeBtn.addEventListener("click", () => {
     }
 
 });
+
+
+let is24Hour = true;
+
+const formatBtn = document.getElementById("formatBtn");
+
+formatBtn.onclick = () => {
+
+    is24Hour = !is24Hour;
+
+    formatBtn.innerHTML = is24Hour ? "12 Hour" : "24 Hour";
+
+};

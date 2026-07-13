@@ -225,3 +225,7 @@ opacity:0;
 body.light #formatBtn{
     color:black;
 }
+
+body.light{
+    background:linear-gradient(-45deg,#ffe259,#ffa751,#ffffff,#f6f8fc);
+}

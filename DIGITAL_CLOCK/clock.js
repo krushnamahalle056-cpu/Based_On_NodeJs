@@ -9,6 +9,8 @@ formatBtn.addEventListener("click", () => {
 });
 
 function updateClock(){
+    
+const now = new Date();
 const currentHour = now.getHours();
 
 let h = currentHour;

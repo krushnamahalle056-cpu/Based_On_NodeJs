@@ -122,5 +122,21 @@ formatBtn.addEventListener("click", () => {
 const battery = document.getElementById("battery");
 
 if ("getBattery" in navigator) {
- 
+     navigator.getBattery().then((bat) => {
+
+        function updateBattery() {
+
+            battery.innerHTML =
+                `🔋 Battery : ${Math.round(bat.level * 100)}% ${
+                    bat.charging ? "⚡ Charging" : ""
+                }`;
+
+        }
+
+        updateBattery();
+
+        bat.addEventListener("levelchange", updateBattery);
+        bat.addEventListener("chargingchange", updateBattery);
+
+    });
 } 

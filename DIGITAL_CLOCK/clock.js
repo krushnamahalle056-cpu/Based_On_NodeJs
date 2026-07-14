@@ -139,4 +139,8 @@ if ("getBattery" in navigator) {
         bat.addEventListener("chargingchange", updateBattery);
 
     });
-} 
+} else {
+
+    battery.innerHTML = "Battery API Not Supported";
+
+}

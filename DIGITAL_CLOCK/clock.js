@@ -115,3 +115,9 @@ formatBtn.addEventListener("click", () => {
     updateClock();
 
 });
+
+
+// Battery Status
+
+const battery = document.getElementById("battery");
+

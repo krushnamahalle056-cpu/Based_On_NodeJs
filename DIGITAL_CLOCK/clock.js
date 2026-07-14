@@ -1,104 +1,117 @@
 let is24Hour = true;
 
+// Theme Button
+const themeBtn = document.getElementById("themeBtn");
+
+// Format Button
 const formatBtn = document.getElementById("formatBtn");
 
-formatBtn.addEventListener("click", () => {
-    is24Hour = !is24Hour;
-    formatBtn.innerHTML = is24Hour ? "12 Hour" : "24 Hour";
-    updateClock();
-});
+// ================= CLOCK =================
 
-function updateClock(){
-    
-const now = new Date();
-const currentHour = now.getHours();
+function updateClock() {
 
-let h = currentHour;
-let ampm = "";
+    const now = new Date();
 
-if(!is24Hour){
-    ampm = h >= 12 ? " PM" : " AM";
-    h = h % 12 || 12;
+    const currentHour = now.getHours();
+
+    let h = currentHour;
+    let m = now.getMinutes();
+    let s = now.getSeconds();
+
+    let ampm = "";
+
+    // 12 / 24 Hour
+    if (!is24Hour) {
+        ampm = h >= 12 ? " PM" : " AM";
+        h = h % 12 || 12;
+    }
+
+    h = String(h).padStart(2, "0");
+    m = String(m).padStart(2, "0");
+    s = String(s).padStart(2, "0");
+
+    document.getElementById("clock").innerHTML =
+        `${h}:${m}:${s}${ampm}`;
+
+    // Date
+
+    const days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+    ];
+
+    const months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+    ];
+
+    document.getElementById("date").innerHTML =
+        `${days[now.getDay()]},
+        ${now.getDate()} ${months[now.getMonth()]} ${now.getFullYear()}`;
+
+    // Greeting
+
+    let greeting = "";
+
+    if (currentHour < 12) {
+        greeting = "🌞 Good Morning";
+    }
+    else if (currentHour < 18) {
+        greeting = "☀️ Good Afternoon";
+    }
+    else {
+        greeting = "🌙 Good Evening";
+    }
+
+    document.getElementById("greeting").innerHTML = greeting;
 }
 
-h = String(h).padStart(2,"0");
-let m = String(now.getMinutes()).padStart(2,"0");
-let s = String(now.getSeconds()).padStart(2,"0");
-
-document.getElementById("clock").innerHTML =
-`${h}:${m}:${s}${ampm}`;
-
-const days=[
-"Sunday",
-"Monday",
-"Tuesday",
-"Wednesday",
-"Thursday",
-"Friday",
-"Saturday"
-];
-
-const months=[
-"January",
-"February",
-"March",
-"April",
-"May",
-"June",
-"July",
-"August",
-"September",
-"October",
-"November",
-"December"
-];
-
-document.getElementById("date").innerHTML=
-`${days[now.getDay()]},
-${now.getDate()}
-${months[now.getMonth()]}
-${now.getFullYear()}`;
-
-let greeting;
-
-if(h<12)
-greeting="🌞 Good Morning";
-
-else if(h<18)
-greeting="☀️ Good Afternoon";
-
-else
-greeting="🌙 Good Evening";
-
-document.getElementById("greeting").innerHTML=greeting;
-
-}
-
-setInterval(updateClock,1000);
-
+// Clock Update
 updateClock();
+setInterval(updateClock, 1000);
 
-// Theme Toggle
-
-const themeBtn = document.getElementById("themeBtn");
+// ================= THEME TOGGLE =================
 
 themeBtn.addEventListener("click", () => {
 
     document.body.classList.toggle("light");
 
-    if(document.body.classList.contains("light")){
+    if (document.body.classList.contains("light")) {
         themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
-    }else{
+    }
+    else {
         themeBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
     }
 
 });
 
+// ================= 12 / 24 HOUR TOGGLE =================
 
-formatBtn.onclick = () => {
+formatBtn.addEventListener("click", () => {
 
     is24Hour = !is24Hour;
 
-    formatBtn.innerHTML = is24Hour ? "12 Hour" : "24 Hour";
+    if (is24Hour) {
+        formatBtn.innerHTML = "12 Hour";
+    } else {
+        formatBtn.innerHTML = "24 Hour";
+    }
 
-};
+    updateClock();
+
+});

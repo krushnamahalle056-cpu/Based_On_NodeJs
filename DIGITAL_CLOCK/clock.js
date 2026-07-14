@@ -121,3 +121,6 @@ formatBtn.addEventListener("click", () => {
 
 const battery = document.getElementById("battery");
 
+if ("getBattery" in navigator) {
+ 
+} 

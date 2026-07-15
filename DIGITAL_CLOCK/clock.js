@@ -147,3 +147,4 @@ if ("getBattery" in navigator) {
 
 // add the typeing animation to the greeting text
 
+const greetingElement = document.getElementById("greeting");

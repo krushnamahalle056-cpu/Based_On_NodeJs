@@ -148,3 +148,23 @@ if ("getBattery" in navigator) {
 // add the typeing animation to the greeting text
 
 const greetingElement = document.getElementById("greeting");
+
+function typeGreeting(text){
+
+    greetingElement.innerHTML = "";
+
+    let i = 0;
+
+    const typing = setInterval(() => {
+
+        greetingElement.innerHTML += text.charAt(i);
+
+        i++;
+
+        if(i >= text.length){
+            clearInterval(typing);
+        }
+
+    },80);
+
+}

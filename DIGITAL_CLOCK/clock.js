@@ -144,3 +144,6 @@ if ("getBattery" in navigator) {
     battery.innerHTML = "Battery API Not Supported";
 
 }
+
+// add the typeing animation to the greeting text
+

@@ -59,6 +59,12 @@ h1{
     animation:blink .8s infinite;
 }
 
+@keyframes blink{
+    50%{
+        border-color:transparent;
+    }
+}
+
 #clock{
     font-size:60px;
     color:#00ffcc;

@@ -78,7 +78,7 @@ function updateClock() {
         greeting = "🌙 Good Evening";
     }
 
-    document.getElementById("greeting").innerHTML = greeting;
+    typeGreeting(greeting);
 }
 
 // Clock Update

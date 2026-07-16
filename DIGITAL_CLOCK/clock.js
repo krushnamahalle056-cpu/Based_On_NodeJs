@@ -183,3 +183,7 @@ function updateNetworkStatus(){
 
 }
 
+updateNetworkStatus();
+
+window.addEventListener("online", updateNetworkStatus);
+window.addEventListener("offline", updateNetworkStatus);

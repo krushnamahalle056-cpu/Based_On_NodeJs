@@ -13,7 +13,7 @@ async function handleGenerateNewShortURL(req, res){
     await URL.create({
         shortId: shortId,
         redirectURL: req.body.url,
-        visitHistory: [],            // show the history of the user who visited the short URL
+        visitHistory: [],               // show the history of the user who visited the short URL
     });
     return res.json({ shortId: shortId });
 }
@@ -26,6 +26,7 @@ async function handleGetAnalytics(req, res){
         analytics: result.visitHistory,
     })
 }
+
 
 module.exports = {
     handleGenerateNewShortURL,

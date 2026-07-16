@@ -171,3 +171,15 @@ function typeGreeting(text){
 
 const networkStatus = document.getElementById("networkStatus");
 
+function updateNetworkStatus(){
+
+    if(navigator.onLine){
+        networkStatus.innerHTML = "🟢 Online";
+        networkStatus.style.color = "#00ff99";
+    }else{
+        networkStatus.innerHTML = "🔴 Offline";
+        networkStatus.style.color = "#ff4444";
+    }
+
+}
+

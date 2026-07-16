@@ -9,10 +9,11 @@ async function handleGenerateNewShortURL(req, res){
     const shortId = nanoid(8);
 
     // Implementation for generating new short URL
+
     await URL.create({
         shortId: shortId,
         redirectURL: req.body.url,
-        visitHistory: [],
+        visitHistory: [],            // show the history of the user who visited the short URL
     });
     return res.json({ shortId: shortId });
 }

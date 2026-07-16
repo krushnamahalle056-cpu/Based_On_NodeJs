@@ -1,5 +1,6 @@
 let is24Hour = true;
-
+let typing;
+let lastGreeting = "";
 // Theme Button
 const themeBtn = document.getElementById("themeBtn");
 
@@ -79,6 +80,11 @@ function updateClock() {
     }
 
     typeGreeting(greeting);
+
+    if (greeting !== lastGreeting) {
+    typeGreeting(greeting);
+    lastGreeting = greeting;
+}
 }
 
 // Clock Update

@@ -1,10 +1,11 @@
 const express = require('express');
+
 const { 
     handleGenerateNewShortURL,
     handleGetAnalytics
 } = require('../controllers/url');
 
-const router = express.Router();
+const router = express.Router();      // Router means Rasta
 
 router.post('/', handleGenerateNewShortURL);
 

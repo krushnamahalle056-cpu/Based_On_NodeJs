@@ -168,3 +168,6 @@ function typeGreeting(text){
     },80);
 
 }
+
+const networkStatus = document.getElementById("networkStatus");
+

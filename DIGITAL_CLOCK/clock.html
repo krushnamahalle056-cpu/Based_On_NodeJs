@@ -3,55 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Clock</title>
+    <title>Advanced Digital Clock</title>
+    
+    <!-- CSS File -->
     <link rel="stylesheet" href="clock.css">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
     
     <!-- Animated Background -->
     <ul class="circles">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li></li><li></li><li></li><li></li><li></li>
+        <li></li><li></li><li></li><li></li><li></li>
     </ul>
 
-  <!-- Clock Card -->
-   <div class="container">
+    <!-- Clock Card -->
+    <div class="container">
+        
+        <!-- Top Controls (Buttons) -->
+        <div class="top-controls">
+            <button id="formatBtn">12 Hour</button>
+            <button id="themeBtn" aria-label="Toggle Theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
 
-    <button id="themeBtn">
-        <i class="fa-solid fa-moon"></i>
-    </button>
+        <h1>Digital Clock</h1>
 
-    <h1>Digital Clock</h1>
+        <!-- Typing Greeting -->
+        <h2 id="greeting"></h2>
 
-    <h2 id="greeting"></h2>
+        <!-- Main Clock -->
+        <div class="clock-wrapper">
+            <span id="clock">00:00:00</span>
+            <span id="ampm"></span>
+        </div>
 
-    <div id="clock">00:00:00</div>
+        <!-- Date -->
+        <p id="date"></p>
 
-    <div id="battery">
-        🔋 Loading Battery...
+        <!-- Status Bar (Battery & Network) -->
+        <div class="status-bar">
+            <div id="battery">🔋 Loading Battery...</div>
+            <div id="networkStatus">🟢 Online</div>
+        </div>
+
     </div>
 
-    <p id="date"></p>
-
-    <button id="formatBtn">12 Hour</button>
-
-    <div id="networkStatus"></div>
-
-</div>
-
+    <!-- JavaScript File -->
     <script src="clock.js"></script>
 
 </body>

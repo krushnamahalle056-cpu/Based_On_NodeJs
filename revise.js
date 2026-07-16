@@ -258,3 +258,4 @@ for(let i=10; i>=1; i--){
     console.log(`${n} * ${i} = ${n*i}`);
 }
 
+console.log("about me");

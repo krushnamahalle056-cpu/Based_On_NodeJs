@@ -26,6 +26,7 @@ async function handleGetAnalytics(req, res){
         analytics: result.visitHistory,
     })
 }
+
 module.exports = {
     handleGenerateNewShortURL,
     handleGetAnalytics,

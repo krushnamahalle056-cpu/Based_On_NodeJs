@@ -75,3 +75,8 @@ body {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Button Hover Effect */
+.contact-btn:hover {
+    background-color: #574bfa;
+    box-shadow: 0 5px 15px rgba(108, 99, 255, 0.4);
+}

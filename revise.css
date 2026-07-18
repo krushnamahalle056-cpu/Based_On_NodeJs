@@ -1,12 +1,10 @@
-H1{
-    color: green;
-    font-size: 30px;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-H2{
-    color:red;
-    font-size: 24px;
+/* Basic Reset aur Background */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ecef;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    font-family: 'Courier New', Courier, monospace;
+    height: 100vh;
+    margin: 0;
 }

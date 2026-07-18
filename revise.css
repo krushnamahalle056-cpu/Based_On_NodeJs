@@ -53,3 +53,11 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
+/* Introduction Text */
+.bio {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}

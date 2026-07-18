@@ -5,9 +5,10 @@ const {
     handleGetAnalytics
 } = require('../controllers/url');
 
-const router = express.Router();      // Router means Rasta
+const router = express.Router();                // Router means Rasta  
 
 router.post('/', handleGenerateNewShortURL);
 
-router.get("/analytics/:shortId", handleGetAnalytics);
-module.exports = router;
+router.get("/analytics/:shortId", handleGetAnalytics); 
+
+module.exports = router;        

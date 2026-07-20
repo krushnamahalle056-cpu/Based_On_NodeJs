@@ -9,7 +9,7 @@ async function handleUserSignup(req, res) {
         password,
     });
 
-    return res.render("home");   
+    return res.render("home");   // after creating the user back to the signup page 
 
     // try {
     //     const user = new User({ name, email, password });

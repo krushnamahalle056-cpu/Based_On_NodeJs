@@ -1,3 +1,4 @@
+const { model } = require('mongoose');
 const User = require('../models/user');
 
 async function handleUserSignup(req, res) {
@@ -18,4 +19,8 @@ async function handleUserSignup(req, res) {
     // } catch (error) {
     //     res.status(400).json({ error: error.message });
     // }
+}
+
+module.exports={
+    handleUserSignup,
 }

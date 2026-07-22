@@ -26,7 +26,12 @@ async function handleUserLogin(req, res) {
 
     const user = await User.findOne({email, password});
 
-    return res.render("home");   // after creating the user back to the signup page 
+    if(!user) return res.render('login'),{
+        error: "invalid Username or Password",
+        
+    }
+
+    return res.redirect("home");   // after creating the user back to the signup page 
 
   
 }

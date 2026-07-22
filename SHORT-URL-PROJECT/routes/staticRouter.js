@@ -15,4 +15,8 @@ router.get('/signup', (req , res)=>{
     return res.render("signup");           // render means hume jaha jana hai return uski location 
 });
 
+router.get('/login', (req , res)=>{
+    return res.render("login");           // render means hume jaha jana hai return uski location 
+});
+
 module.exports = router;

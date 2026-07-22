@@ -32,13 +32,38 @@ app.use("/url", URLRoutes);
 app.use("/user", userRoute);
 app.use("/", staticRoute);
 
-app.get("/:shortId", async(req, res) =>{
+// app.get("/:shortId", async(req, res) =>{
+//   const shortId = req.params.shortId;
+//   const entry = await URL.findOneAndUpdate(
+//     {shortId},
+//     {$push: {visitHistory: {timestamp: Date.now()}}}
+//   );
+//   res.redirect(entry.redirectURL);
+// });
+
+
+app.get("/:shortId", async (req, res) => {
   const shortId = req.params.shortId;
+
   const entry = await URL.findOneAndUpdate(
-    {shortId},
-    {$push: {visitHistory: {timestamp: Date.now()}}}
+    { shortId },
+    {
+      $push: {
+        visitHistory: {
+          timestamp: Date.now(),
+        },
+      },
+    }
   );
-  res.redirect(entry.redirectURL);
+
+  console.log("Short ID:", shortId);          // Temporary code
+  console.log("Entry:", entry);
+
+  if (!entry) {
+    return res.status(404).send("Short URL not found");                      // find entry
+  }
+
+  return res.redirect(entry.redirectURL);
 });
 
 app.listen(PORT, () => console.log(`Server Started at PORT =${PORT}`))

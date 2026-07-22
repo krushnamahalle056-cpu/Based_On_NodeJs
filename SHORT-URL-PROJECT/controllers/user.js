@@ -24,6 +24,8 @@ async function handleUserLogin(req, res) {
     
     });
 
+    const sessionId = uuidv4();
+
     return res.redirect("/");   // after creating the user back to the signup page 
 }
 

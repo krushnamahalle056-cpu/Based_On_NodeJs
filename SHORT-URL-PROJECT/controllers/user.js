@@ -1,4 +1,4 @@
-const { model } = require('mongoose');
+// const { model } = require('mongoose');
 const User = require('../models/user');
 
 async function handleUserSignup(req, res) {

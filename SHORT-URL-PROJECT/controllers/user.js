@@ -10,15 +10,8 @@ async function handleUserSignup(req, res) {
         password,
     });
 
-    return res.render("home");   // after creating the user back to the signup page 
-
-    // try {
-    //     const user = new User({ name, email, password });
-    //     await user.save();
-    //     res.status(201).json({ message: 'User created successfully' });
-    // } catch (error) {
-    //     res.status(400).json({ error: error.message });
-    // }
+    return res.redirect("/");   // after creating the user back to the signup page 
+ 
 }
 
 async function handleUserLogin(req, res) {
@@ -26,16 +19,16 @@ async function handleUserLogin(req, res) {
 
     const user = await User.findOne({email, password});
 
-    if(!user) return res.render('login'),{
+    if(!user) return res.render("login",{
         error: "invalid Username or Password",
-        
-    }
+    
+    });
 
-    return res.redirect("home");   // after creating the user back to the signup page 
-
-  
+    return res.redirect("/");   // after creating the user back to the signup page 
 }
 
 module.exports={
     handleUserSignup,
+    handleUserLogin,
+
 }

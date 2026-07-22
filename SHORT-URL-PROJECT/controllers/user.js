@@ -21,6 +21,16 @@ async function handleUserSignup(req, res) {
     // }
 }
 
+async function handleUserLogin(req, res) {
+    const { email, password } = req.body;
+
+    const user = await User.findOne({email, password});
+
+    return res.render("home");   // after creating the user back to the signup page 
+
+  
+}
+
 module.exports={
     handleUserSignup,
 }

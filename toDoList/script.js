@@ -7,6 +7,7 @@ function addTask() {
         return;
     }
 
+    
     let li = document.createElement("li");
     li.innerHTML = `
         ${task}

@@ -14,10 +14,8 @@ function addTask() {
     `;
 
     document.getElementById("taskList").appendChild(li);
-
     input.value = "";
 }
-
 
 function removeTask(button) {
     button.parentElement.remove();

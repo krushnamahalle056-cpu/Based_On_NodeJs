@@ -47,6 +47,7 @@ function resetWatch() {
   updateDisplay();
 }
 
+
 document.getElementById("start").addEventListener("click", startWatch);
 document.getElementById("pause").addEventListener("click", pauseWatch);
 document.getElementById("reset").addEventListener("click", resetWatch);

@@ -33,6 +33,7 @@ function startWatch() {
   }, 1000);
 }
 
+
 function pauseWatch() {
   clearInterval(timer);
   timer = null;

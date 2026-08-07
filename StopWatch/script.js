@@ -15,6 +15,7 @@ function updateDisplay() {
 
 function startWatch() {
   if (timer !== null) return;
+  
 
   timer = setInterval(() => {
     seconds++;
@@ -23,7 +24,7 @@ function startWatch() {
       seconds = 0;
       minutes++;
     }
-    
+
 
     if (minutes === 60) {
       minutes = 0;

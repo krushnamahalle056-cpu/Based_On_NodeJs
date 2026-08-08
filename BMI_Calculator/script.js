@@ -99,6 +99,7 @@ function calculateBMI() {
 
     }
 
+    
     else {
 
         category = "Obesity";

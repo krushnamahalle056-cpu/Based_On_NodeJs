@@ -21,7 +21,6 @@ function calculateBMI() {
 
     error.innerText = "";
 
-
     // Validation
 
     if (

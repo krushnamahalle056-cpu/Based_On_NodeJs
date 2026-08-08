@@ -110,7 +110,6 @@ function calculateBMI() {
 
     }
 
-
     // Display category
 
     bmiCategory.innerText = category;

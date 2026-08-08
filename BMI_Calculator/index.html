@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BMI Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="bmi-container">
+
+        <div class="header">
+            <h1>BMI Calculator</h1>
+            <p>Check your Body Mass Index</p>
+        </div>
+
+        <div class="form">
+
+            <div class="input-group">
+                <label for="weight">Weight</label>
+
+                <div class="input-box">
+                    <input
+                        type="number"
+                        id="weight"
+                        placeholder="Enter your weight"
+                        min="1"
+                    >
+                    <span>kg</span>
+                </div>
+            </div>
+
+
+            <div class="input-group">
+                <label for="height">Height</label>
+
+                <div class="input-box">
+                    <input
+                        type="number"
+                        id="height"
+                        placeholder="Enter your height"
+                        min="1"
+                    >
+                    <span>cm</span>
+                </div>
+            </div>
+
+
+            <div class="buttons">
+                <button class="calculate-btn" onclick="calculateBMI()">
+                    Calculate BMI
+                </button>
+
+                <button class="reset-btn" onclick="resetBMI()">
+                    Reset
+                </button>
+            </div>
+
+        </div>
+
+
+        <div id="error"></div>
+
+
+        <div class="result" id="result">
+
+            <p class="result-title">Your BMI</p>
+
+            <h2 id="bmiValue">--</h2>
+
+            <p id="bmiCategory">Enter your details</p>
+
+            <div class="meter">
+                <div class="meter-bar" id="meterBar"></div>
+            </div>
+
+        </div>
+
+
+        <div class="categories">
+
+            <div class="category underweight">
+                <span>Underweight</span>
+                <strong>&lt; 18.5</strong>
+            </div>
+
+            <div class="category normal">
+                <span>Normal</span>
+                <strong>18.5 - 24.9</strong>
+            </div>
+
+            <div class="category overweight">
+                <span>Overweight</span>
+                <strong>25 - 29.9</strong>
+            </div>
+
+            <div class="category obesity">
+                <span>Obesity</span>
+                <strong>30+</strong>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

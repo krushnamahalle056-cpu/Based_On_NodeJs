@@ -56,7 +56,6 @@ function calculateBMI() {
 
     bmiValue.innerText = finalBMI;
 
-
     // BMI Categories
 
     let category;
@@ -120,7 +119,7 @@ function calculateBMI() {
     bmiValue.style.color = color;
 
     // Move BMI meter indicator
-    
+
 
     meterBar.style.left =
         `calc(${meterPosition}% - 8px)`;

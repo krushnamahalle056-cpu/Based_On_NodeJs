@@ -13,9 +13,10 @@ function updateDisplay() {
   display.textContent = `${h}:${m}:${s}`;
 }
 
+
 function startWatch() {
   if (timer !== null) return;
-  
+
 
   timer = setInterval(() => {
     seconds++;

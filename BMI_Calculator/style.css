@@ -350,7 +350,6 @@ button {
     background: #fdecea;
 }
 
-
 /* Mobile */
 
 @media (max-width: 480px) {
@@ -370,7 +369,7 @@ button {
     .buttons {
         flex-direction: column;
     }
-    
+
 
     .reset-btn {
         width: 100%;

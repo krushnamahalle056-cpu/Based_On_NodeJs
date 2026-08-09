@@ -35,7 +35,7 @@ function renderTasks() {
             <button class="delete-btn">🗑️</button>
         `;
 
-        
+
         // Complete task
         li.querySelector(".check-btn").addEventListener("click", () => {
             task.completed = !task.completed;
@@ -43,6 +43,7 @@ function renderTasks() {
             renderTasks();
         });
 
+        
         // Delete task
         li.querySelector(".delete-btn").addEventListener("click", () => {
             tasks = tasks.filter(t => t.id !== task.id);

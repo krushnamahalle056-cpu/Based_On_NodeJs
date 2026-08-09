@@ -54,7 +54,7 @@ function renderTasks() {
 
         taskList.appendChild(li);
     });
-    
+
 
     updateStats();
 }
@@ -117,5 +117,6 @@ clearBtn.addEventListener("click", () => {
         renderTasks();
     }
 });
+
 
 renderTasks();

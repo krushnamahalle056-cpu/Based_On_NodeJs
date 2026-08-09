@@ -51,9 +51,10 @@ function renderTasks() {
             renderTasks();
         });
 
-        
+
         taskList.appendChild(li);
     });
+    
 
     updateStats();
 }

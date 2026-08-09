@@ -12,7 +12,7 @@ function saveTasks() {
 }
 
 function renderTasks() {
-    
+
     taskList.innerHTML = "";
 
     tasks.forEach((task) => {
@@ -24,6 +24,7 @@ function renderTasks() {
             li.classList.add("completed");
         }
 
+        
         li.innerHTML = `
             <button class="check-btn"></button>
 

@@ -24,7 +24,7 @@ function renderTasks() {
             li.classList.add("completed");
         }
 
-        
+
         li.innerHTML = `
             <button class="check-btn"></button>
 
@@ -35,6 +35,7 @@ function renderTasks() {
             <button class="delete-btn">🗑️</button>
         `;
 
+        
         // Complete task
         li.querySelector(".check-btn").addEventListener("click", () => {
             task.completed = !task.completed;

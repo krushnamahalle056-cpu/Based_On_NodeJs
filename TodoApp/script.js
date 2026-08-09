@@ -43,7 +43,7 @@ function renderTasks() {
             renderTasks();
         });
 
-        
+
         // Delete task
         li.querySelector(".delete-btn").addEventListener("click", () => {
             tasks = tasks.filter(t => t.id !== task.id);
@@ -51,6 +51,7 @@ function renderTasks() {
             renderTasks();
         });
 
+        
         taskList.appendChild(li);
     });
 

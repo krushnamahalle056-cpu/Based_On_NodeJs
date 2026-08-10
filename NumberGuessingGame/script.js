@@ -44,6 +44,7 @@ function checkGuess() {
 
         message.style.color = "red";
     }
+    
 
     input.value = "";
 }
@@ -63,5 +64,5 @@ function resetGame() {
     document.getElementById("message").style.color = "#555";
 
     document.getElementById("guessInput").value = "";
-    
+
 }

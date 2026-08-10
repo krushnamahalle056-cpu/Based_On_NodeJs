@@ -17,6 +17,7 @@ function checkGuess() {
         message.style.color = "orange";
         return;
     }
+    
 
     attempts++;
 

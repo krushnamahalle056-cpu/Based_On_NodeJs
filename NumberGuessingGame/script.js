@@ -23,6 +23,7 @@ function checkGuess() {
 
     attemptsText.textContent = attempts;
 
+    
     if (guess === randomNumber) {
 
         message.textContent =
@@ -44,7 +45,7 @@ function checkGuess() {
 
         message.style.color = "red";
     }
-    
+
 
     input.value = "";
 }

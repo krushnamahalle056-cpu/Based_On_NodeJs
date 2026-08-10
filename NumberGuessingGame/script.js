@@ -17,7 +17,7 @@ function checkGuess() {
         message.style.color = "orange";
         return;
     }
-    
+
 
     attempts++;
 
@@ -29,6 +29,7 @@ function checkGuess() {
             `🎉 Correct! The number was ${randomNumber}!`;
 
         message.style.color = "green";
+        
 
     } else if (guess < randomNumber) {
 

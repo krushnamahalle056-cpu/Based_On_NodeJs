@@ -36,7 +36,7 @@ function checkGuess() {
         message.textContent = "📈 Too low! Try a bigger number.";
 
         message.style.color = "red";
-        
+
 
     } else {
 
@@ -63,4 +63,5 @@ function resetGame() {
     document.getElementById("message").style.color = "#555";
 
     document.getElementById("guessInput").value = "";
+    
 }

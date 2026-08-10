@@ -29,13 +29,14 @@ function checkGuess() {
             `🎉 Correct! The number was ${randomNumber}!`;
 
         message.style.color = "green";
-        
+
 
     } else if (guess < randomNumber) {
 
         message.textContent = "📈 Too low! Try a bigger number.";
 
         message.style.color = "red";
+        
 
     } else {
 

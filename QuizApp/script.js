@@ -123,6 +123,7 @@ function showResult() {
     nextButton.style.display = "inline-block";
 
     nextButton.onclick = restartQuiz;
+    
 }
 
 function restartQuiz() {

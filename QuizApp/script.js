@@ -82,7 +82,7 @@ function showQuestion() {
 
         const button = document.createElement("button");
 
-        
+
         button.innerText = option;
 
         button.onclick = function () {
@@ -103,6 +103,7 @@ function checkAnswer(selectedAnswer) {
 
     if (currentQuestion < questions.length) {
         showQuestion();
+        
     } else {
         showResult();
     }

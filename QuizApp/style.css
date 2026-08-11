@@ -28,6 +28,7 @@ h2 {
 }
 
 #options button {
+
     width: 100%;
     padding: 12px;
     margin: 8px 0;
@@ -35,6 +36,7 @@ h2 {
     border: 1px solid #aaa;
     border-radius: 5px;
     cursor: pointer;
+    
 }
 
 #options button:hover {

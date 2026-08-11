@@ -103,7 +103,7 @@ function checkAnswer(selectedAnswer) {
 
     if (currentQuestion < questions.length) {
         showQuestion();
-        
+
     } else {
         showResult();
     }
@@ -138,5 +138,6 @@ function restartQuiz() {
 }
 
 nextButton.style.display = "none";
+
 
 showQuestion();

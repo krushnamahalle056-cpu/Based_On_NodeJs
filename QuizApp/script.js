@@ -82,6 +82,7 @@ function showQuestion() {
 
         const button = document.createElement("button");
 
+        
         button.innerText = option;
 
         button.onclick = function () {

@@ -22,7 +22,7 @@ const questions = [
     },
 
     {
-        
+
         question: "Which language is used to make a webpage interactive?",
         options: [
             "HTML",
@@ -64,6 +64,7 @@ const questionElement = document.getElementById("question");
 const optionsElement = document.getElementById("options");
 const nextButton = document.getElementById("next-btn");
 const resultElement = document.getElementById("result");
+
 
 function showQuestion() {
 

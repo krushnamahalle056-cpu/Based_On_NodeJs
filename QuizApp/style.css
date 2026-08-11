@@ -9,11 +9,13 @@ body {
 }
 
 .quiz-container {
+
     background-color: white;
     width: 400px;
     padding: 30px;
     border-radius: 10px;
     text-align: center;
+    
 }
 
 

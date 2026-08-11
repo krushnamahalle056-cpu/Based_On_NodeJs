@@ -66,6 +66,7 @@ const nextButton = document.getElementById("next-btn");
 const resultElement = document.getElementById("result");
 
 
+
 function showQuestion() {
 
     const question = questions[currentQuestion];

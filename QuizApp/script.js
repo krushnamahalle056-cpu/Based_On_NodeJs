@@ -9,6 +9,7 @@ const questions = [
         ],
         answer: "Hyper Text Markup Language"
     },
+    
 
     {
         question: "Which language is used to style a webpage?",
@@ -136,7 +137,7 @@ function restartQuiz() {
     nextButton.style.display = "none";
 
     showQuestion();
-    
+
 }
 
 nextButton.style.display = "none";

@@ -24,7 +24,9 @@ h1 {
 }
 
 h2 {
+
     margin-bottom: 20px;
+
 }
 
 #options button {
@@ -41,10 +43,13 @@ h2 {
 
 
 #options button:hover {
+
     background-color: #eee;
+
 }
 
 #next-btn {
+
     margin-top: 15px;
     padding: 10px 25px;
     background-color: #4f46e5;
@@ -52,14 +57,20 @@ h2 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+
 }
 
 #next-btn:hover {
+
     background-color: #3730a3;
+
 }
 
 #result {
+
     font-size: 20px;
     font-weight: bold;
     color: #333;
+    
 }
+

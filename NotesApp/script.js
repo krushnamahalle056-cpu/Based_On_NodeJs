@@ -15,6 +15,7 @@ function displayNotes(notesToDisplay = notes) {
 
         noteElement.className = "note";
 
+        
         noteElement.innerHTML = `
             <h3>${note.title}</h3>
             <p>${note.text}</p>
@@ -72,7 +73,7 @@ function editNote(index) {
 
         saveNotes();
         displayNotes();
-        
+
     }
 }
 

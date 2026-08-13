@@ -64,6 +64,7 @@ function deleteNote(index) {
 }
 
 function editNote(index) {
+    
     const newTitle = prompt("Enter new title:", notes[index].title);
     const newText = prompt("Enter new note:", notes[index].text);
 
@@ -80,11 +81,12 @@ function editNote(index) {
 
 function searchNotes() {
 
-    
+
     const searchText = document
         .getElementById("search")
         .value
         .toLowerCase();
+
 
     const filteredNotes = notes.filter(note =>
         note.title.toLowerCase().includes(searchText) ||

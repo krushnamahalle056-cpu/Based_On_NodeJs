@@ -72,6 +72,7 @@ function editNote(index) {
 
         saveNotes();
         displayNotes();
+        
     }
 }
 

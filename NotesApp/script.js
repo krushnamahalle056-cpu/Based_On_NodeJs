@@ -58,7 +58,6 @@ function addNote() {
 
 function deleteNote(index) {
     notes.splice(index, 1);
-
     saveNotes();
     displayNotes();
 }

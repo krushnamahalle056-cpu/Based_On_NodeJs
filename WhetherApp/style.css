@@ -61,9 +61,12 @@ button:hover {
   border-radius: 10px;
 }
 
+
 .weather-card h2 {
+
   color: #333;
   margin-bottom: 10px;
+  
 }
 
 #temperature {

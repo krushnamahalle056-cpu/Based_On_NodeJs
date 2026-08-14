@@ -2,6 +2,7 @@ const cityInput = document.getElementById("cityInput");
 const searchBtn = document.getElementById("searchBtn");
 
 const city = document.getElementById("city");
+
 const temperature = document.getElementById("temperature");
 const condition = document.getElementById("condition");
 const humidity = document.getElementById("humidity");
@@ -17,7 +18,7 @@ cityInput.addEventListener("keypress", function (event) {
 });
 
 function getWeather() {
-    
+
   const cityName = cityInput.value.trim();
 
   error.textContent = "";

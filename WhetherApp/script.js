@@ -66,6 +66,7 @@ function getWeather() {
   city.textContent = cityName;
   temperature.textContent = `${data.temp}°C`;
   condition.textContent = data.condition;
+  
   humidity.textContent = data.humidity;
   wind.textContent = data.wind;
 }

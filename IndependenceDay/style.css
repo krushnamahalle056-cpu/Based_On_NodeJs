@@ -93,6 +93,7 @@ button:hover {
   transform: scale(1.05);
 }
 
+
 #greeting {
   margin-top: 20px;
   color: #138808;
@@ -113,7 +114,7 @@ button:hover {
   .green {
     height: 48px;
   }
-  
+
 
   .chakra {
     font-size: 35px;

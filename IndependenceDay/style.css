@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to bottom,
+    #ff9933,
+    #ffffff,
+    #138808
+  );
+}
+
+.container {
+  width: 90%;
+  max-width: 600px;
+  padding: 40px 25px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.flag {
+  width: 300px;
+  height: 180px;
+  margin: 0 auto 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.orange {
+  height: 60px;
+  background: #ff9933;
+}
+
+.white {
+  height: 60px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.green {
+  height: 60px;
+  background: #138808;
+}
+
+.chakra {
+  color: #000080;
+  font-size: 45px;
+}
+
+h1 {
+  color: #ff6600;
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+h2 {
+  color: #138808;
+  margin-bottom: 20px;
+}
+
+.message {
+  color: #444;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  background: #ff9933;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #138808;
+  transform: scale(1.05);
+}
+
+#greeting {
+  margin-top: 20px;
+  color: #138808;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+@media (max-width: 500px) {
+
+  .flag {
+    width: 240px;
+    height: 144px;
+  }
+
+
+  .orange,
+  .white,
+  .green {
+    height: 48px;
+  }
+  
+
+  .chakra {
+    font-size: 35px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .message {
+    font-size: 16px;
+  }
+}

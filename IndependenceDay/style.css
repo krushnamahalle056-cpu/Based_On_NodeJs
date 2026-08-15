@@ -64,6 +64,7 @@ h1 {
   margin-bottom: 15px;
 }
 
+
 h2 {
   color: #138808;
   margin-bottom: 20px;
@@ -88,7 +89,7 @@ button {
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
-  
+
 }
 
 button:hover {

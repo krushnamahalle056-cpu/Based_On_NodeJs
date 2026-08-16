@@ -52,7 +52,7 @@ function updateCart() {
         <button onclick="decreaseQuantity(${item.id})">−</button>
         <span>${item.quantity}</span>
         <button onclick="increaseQuantity(${item.id})">+</button>
-        
+
       </div>
 
       <strong>₹${item.price * item.quantity}</strong>
@@ -100,6 +100,7 @@ function removeItem(id) {
 }
 
 function checkout() {
+
   if (cart.length === 0) {
     alert("Your cart is empty!");
     return;
@@ -109,4 +110,5 @@ function checkout() {
 
   cart = [];
   updateCart();
+  
 }

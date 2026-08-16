@@ -20,6 +20,7 @@ function addToCart(id, name, price) {
 }
 
 function updateCart() {
+    
   const cartItems = document.getElementById("cart-items");
   const cartCount = document.getElementById("cart-count");
   const cartTotal = document.getElementById("cart-total");
@@ -110,5 +111,5 @@ function checkout() {
 
   cart = [];
   updateCart();
-  
+
 }

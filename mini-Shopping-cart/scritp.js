@@ -2,7 +2,7 @@ let cart = [];
 
 
 function addToCart(id, name, price) {
-    
+
   const existingItem = cart.find(item => item.id === id);
 
   if (existingItem) {
@@ -48,9 +48,11 @@ function updateCart() {
       </div>
 
       <div class="quantity">
+
         <button onclick="decreaseQuantity(${item.id})">−</button>
         <span>${item.quantity}</span>
         <button onclick="increaseQuantity(${item.id})">+</button>
+        
       </div>
 
       <strong>₹${item.price * item.quantity}</strong>

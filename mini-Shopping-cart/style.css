@@ -11,12 +11,14 @@ body {
 }
 
 header {
+
   background: #111827;
   color: white;
   padding: 20px 8%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 }
 
 header h1 {
@@ -192,7 +194,7 @@ button {
   }
 
   .cart-footer {
-    
+
     flex-direction: column;
     gap: 15px;
     align-items: stretch;

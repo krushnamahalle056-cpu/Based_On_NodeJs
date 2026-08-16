@@ -2,6 +2,7 @@ let cart = [];
 
 
 function addToCart(id, name, price) {
+    
   const existingItem = cart.find(item => item.id === id);
 
   if (existingItem) {

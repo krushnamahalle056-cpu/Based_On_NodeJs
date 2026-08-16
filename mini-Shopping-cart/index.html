@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Shopping Cart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🛒 Mini Shop</h1>
+    <div class="cart-icon">
+      Cart: <span id="cart-count">0</span>
+    </div>
+  </header>
+
+  <main>
+    <h2>Products</h2>
+
+    <div class="products">
+
+      <div class="product">
+        <div class="product-img">👟</div>
+        <h3>Running Shoes</h3>
+        <p>₹1,999</p>
+        <button onclick="addToCart(1, 'Running Shoes', 1999)">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product">
+        <div class="product-img">🎧</div>
+        <h3>Headphones</h3>
+        <p>₹1,499</p>
+        <button onclick="addToCart(2, 'Headphones', 1499)">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product">
+        <div class="product-img">⌚</div>
+        <h3>Smart Watch</h3>
+        <p>₹2,499</p>
+        <button onclick="addToCart(3, 'Smart Watch', 2499)">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product">
+        <div class="product-img">🎒</div>
+        <h3>Backpack</h3>
+        <p>₹999</p>
+        <button onclick="addToCart(4, 'Backpack', 999)">
+          Add to Cart
+        </button>
+      </div>
+
+    </div>
+
+    <section class="cart">
+      <h2>🛒 Your Cart</h2>
+
+      <div id="cart-items">
+        <p class="empty">Your cart is empty.</p>
+      </div>
+
+      
+      <div class="cart-footer">
+        <h3>Total: ₹<span id="cart-total">0</span></h3>
+        <button class="checkout" onclick="checkout()">
+          Checkout
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

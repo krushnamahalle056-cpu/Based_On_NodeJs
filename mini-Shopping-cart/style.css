@@ -93,11 +93,13 @@ button {
 /* Cart */
 
 .cart {
+
   background: white;
   margin-top: 40px;
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  
 }
 
 .cart-item {
@@ -194,5 +196,5 @@ button {
     gap: 15px;
     align-items: stretch;
   }
-  
+
 }

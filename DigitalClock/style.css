@@ -11,11 +11,12 @@ body {
 }
 
 .clock {
-    
+
   text-align: center;
   background-color: #333;
   padding: 40px;
   border-radius: 15px;
+  
 }
 
 h1 {

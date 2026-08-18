@@ -12,16 +12,18 @@ body {
     align-items: center;
     background: linear-gradient(135deg, #38bdf8, #6366f1);
     font-family: Arial, sans-serif;
-    
+
 }
 
 .container {
+
     width: 350px;
     padding: 30px;
     background: white;
     border-radius: 15px;
     text-align: center;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    
 }
 
 h1 {

@@ -7,7 +7,7 @@ function convertTemperature() {
     let unit = document.getElementById("unit").value;
     let result;
 
-    if (unit  ===  "celsius") {
+    if (unit === "celsius") {
         result  =  (temperature * 9 / 5) + 32;
 
         document.getElementById("result").textContent =

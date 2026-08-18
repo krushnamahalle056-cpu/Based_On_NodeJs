@@ -14,9 +14,11 @@ function convertTemperature() {
             "Result: " + result.toFixed(2) + " °F";
 
     } else {
+
         result = (temperature - 32) * 5 / 9;
 
         document.getElementById("result").textContent =
             "Result: " + result.toFixed(2) + " °C";
+            
     }
 }

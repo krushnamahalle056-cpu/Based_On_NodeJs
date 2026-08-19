@@ -12,7 +12,6 @@ function showTime() {
   seconds = seconds < 10 ? "0" + seconds : seconds;
 
 
-  
   document.getElementById("time").innerText =
     hours + ":" + minutes + ":" + seconds;
 }

@@ -35,7 +35,7 @@ h1 {
   background: #3498db;
   border-radius: 10px;
   margin-bottom: 20px;
-  
+
 }
 
 #colorCode {
@@ -53,5 +53,5 @@ button {
 }
 
 button:hover {
-  background: #444;
+  background:  #444;
 }
